@@ -8,6 +8,6 @@ namespace Meeting_Scheduler
 {
     class User
     {
-      
+        
     }
 }
