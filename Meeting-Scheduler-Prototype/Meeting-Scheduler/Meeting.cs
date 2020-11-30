@@ -19,7 +19,7 @@ namespace Meeting_Scheduler
             slots = new List<DateTime>();
             title = ltitle;
             desc = ldesc;
-            participants = lparticipants;
+            //participants = lparticipants;
         }
         public void editParticipants()//could be bool we shall see
         {
