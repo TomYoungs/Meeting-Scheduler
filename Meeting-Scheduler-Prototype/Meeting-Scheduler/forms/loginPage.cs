@@ -37,8 +37,9 @@ namespace SEassignmentForms
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void LoginButton_Click(object sender, EventArgs e)
         {
+            //if statement here
             this.Hide();
             home f1 = new home();
             f1.Show();
