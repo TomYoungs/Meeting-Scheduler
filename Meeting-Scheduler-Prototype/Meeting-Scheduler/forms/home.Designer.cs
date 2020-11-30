@@ -42,10 +42,9 @@ namespace SEassignmentForms
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(11, 11);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Location = new System.Drawing.Point(34, 14);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(79, 29);
+            this.button1.Size = new System.Drawing.Size(118, 45);
             this.button1.TabIndex = 0;
             this.button1.Text = "New Meeting";
             this.button1.UseVisualStyleBackColor = true;
@@ -53,10 +52,9 @@ namespace SEassignmentForms
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(11, 42);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Location = new System.Drawing.Point(34, 65);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(79, 29);
+            this.button2.Size = new System.Drawing.Size(118, 45);
             this.button2.TabIndex = 1;
             this.button2.Text = "Preference";
             this.button2.UseVisualStyleBackColor = true;
@@ -64,10 +62,9 @@ namespace SEassignmentForms
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(329, 175);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button3.Location = new System.Drawing.Point(494, 269);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(79, 29);
+            this.button3.Size = new System.Drawing.Size(118, 45);
             this.button3.TabIndex = 2;
             this.button3.Text = "Edit Meeting";
             this.button3.UseVisualStyleBackColor = true;
@@ -76,59 +73,65 @@ namespace SEassignmentForms
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(203, 180);
+            this.comboBox1.Location = new System.Drawing.Point(304, 277);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.Size = new System.Drawing.Size(180, 28);
             this.comboBox1.TabIndex = 3;
             // 
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(203, 250);
+            this.comboBox2.Location = new System.Drawing.Point(304, 385);
+            this.comboBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 21);
+            this.comboBox2.Size = new System.Drawing.Size(180, 28);
             this.comboBox2.TabIndex = 4;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(54, 180);
+            this.label1.Location = new System.Drawing.Point(81, 277);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(72, 13);
+            this.label1.Size = new System.Drawing.Size(108, 20);
             this.label1.TabIndex = 5;
             this.label1.Text = "your meetings";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(53, 250);
+            this.label2.Location = new System.Drawing.Point(80, 385);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(96, 13);
+            this.label2.Size = new System.Drawing.Size(145, 20);
             this.label2.TabIndex = 6;
             this.label2.Text = "proposed meetings";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(54, 309);
+            this.label3.Location = new System.Drawing.Point(81, 475);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(95, 13);
+            this.label3.Size = new System.Drawing.Size(143, 20);
             this.label3.TabIndex = 7;
             this.label3.Text = "sheduled meetings";
             // 
             // comboBox3
             // 
             this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(203, 309);
+            this.comboBox3.Location = new System.Drawing.Point(304, 475);
+            this.comboBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 21);
+            this.comboBox3.Size = new System.Drawing.Size(180, 28);
             this.comboBox3.TabIndex = 8;
             // 
             // home
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(495, 482);
+            this.ClientSize = new System.Drawing.Size(742, 742);
             this.Controls.Add(this.comboBox3);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -138,7 +141,6 @@ namespace SEassignmentForms
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "home";
             this.Text = "home";
             this.ResumeLayout(false);
