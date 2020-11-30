@@ -14,7 +14,7 @@ namespace Meeting_Scheduler
         private List<Meeting> proposedMeetings;
         private List<Meeting> sheduledMeetings;
         public User(string user) {
-            userName = user;
+            userName = user; // test 1 - Tom sucks :)
             yourMeetings = new List<Meeting>();
             proposedMeetings = new List<Meeting>();
             sheduledMeetings = new List<Meeting>();
