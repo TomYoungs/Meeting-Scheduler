@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Meeting_Scheduler.forms
 {
-    public partial class Preference : Form
+    public partial class Form1 : Form
     {
-        public Preference()
+        public Form1()
         {
             InitializeComponent();
         }

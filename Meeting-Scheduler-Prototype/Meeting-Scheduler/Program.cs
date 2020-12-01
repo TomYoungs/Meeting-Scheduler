@@ -1,11 +1,10 @@
-﻿using SEassignmentForms;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Meeting_Scheduler
+namespace Meeting_Scheduler.forms
 {
     static class Program
     {

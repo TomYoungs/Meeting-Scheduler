@@ -7,6 +7,6 @@ C:\Users\tomfy\OneDrive - Sheffield Hallam University\Uni\Projects Visual Studio
 C:\Users\tomfy\OneDrive - Sheffield Hallam University\Uni\Projects Visual Studio\Meeting-Scheduler\Meeting-Scheduler-Prototype\Meeting-Scheduler\obj\Debug\Meeting-Scheduler.csproj.CoreCompileInputs.cache
 C:\Users\tomfy\OneDrive - Sheffield Hallam University\Uni\Projects Visual Studio\Meeting-Scheduler\Meeting-Scheduler-Prototype\Meeting-Scheduler\obj\Debug\Meeting-Scheduler.exe
 C:\Users\tomfy\OneDrive - Sheffield Hallam University\Uni\Projects Visual Studio\Meeting-Scheduler\Meeting-Scheduler-Prototype\Meeting-Scheduler\obj\Debug\Meeting-Scheduler.pdb
-C:\Users\tomfy\OneDrive - Sheffield Hallam University\Uni\Projects Visual Studio\Meeting-Scheduler\Meeting-Scheduler-Prototype\Meeting-Scheduler\obj\Debug\SEassignmentForms.loginPage.resources
-C:\Users\tomfy\OneDrive - Sheffield Hallam University\Uni\Projects Visual Studio\Meeting-Scheduler\Meeting-Scheduler-Prototype\Meeting-Scheduler\obj\Debug\SEassignmentForms.newMeeting.resources
-C:\Users\tomfy\OneDrive - Sheffield Hallam University\Uni\Projects Visual Studio\Meeting-Scheduler\Meeting-Scheduler-Prototype\Meeting-Scheduler\obj\Debug\SEassignmentForms.home.resources
+C:\Users\tomfy\OneDrive - Sheffield Hallam University\Uni\Projects Visual Studio\Meeting-Scheduler\Meeting-Scheduler-Prototype\Meeting-Scheduler\obj\Debug\Meeting_Scheduler.forms.home.resources
+C:\Users\tomfy\OneDrive - Sheffield Hallam University\Uni\Projects Visual Studio\Meeting-Scheduler\Meeting-Scheduler-Prototype\Meeting-Scheduler\obj\Debug\Meeting_Scheduler.forms.loginPage.resources
+C:\Users\tomfy\OneDrive - Sheffield Hallam University\Uni\Projects Visual Studio\Meeting-Scheduler\Meeting-Scheduler-Prototype\Meeting-Scheduler\obj\Debug\Meeting_Scheduler.forms.newMeeting.resources
