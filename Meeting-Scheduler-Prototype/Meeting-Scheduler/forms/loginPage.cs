@@ -46,6 +46,19 @@ namespace Meeting_Scheduler.forms
                 home f1 = new home();
                 f1.Show();
             }
+            else if (username.Text != "Mehmet" && password.Text == "Ozcan123")
+            {
+                username.Text = "INCORRECT";
+            }
+            else if (username.Text == "Mehmet" && password.Text != "Ozcan123")
+            {
+                password.Text = "INCORRECT";
+            }
+            else
+            {
+                username.Text = "INCORRECT";
+                password.Text = "INCORRECT";
+            }
         }
     }
 }
