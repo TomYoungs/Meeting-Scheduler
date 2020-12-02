@@ -39,10 +39,13 @@ namespace Meeting_Scheduler.forms
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
-            //if statement here
-            this.Hide();
-            home f1 = new home();
-            f1.Show();
+            //if statement here if (textbox1.Text.Length > 0)
+            if (username.Text == "Mehmet" && password.Text == "Ozcan123")
+            {
+                this.Hide();
+                home f1 = new home();
+                f1.Show();
+            }
         }
     }
 }
