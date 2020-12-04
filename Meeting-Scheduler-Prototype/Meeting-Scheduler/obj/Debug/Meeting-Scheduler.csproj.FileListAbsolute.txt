@@ -21,6 +21,7 @@ C:\Users\jessr\OneDrive - Sheffield Hallam University\year 2\Software Engineerin
 C:\Users\jessr\OneDrive - Sheffield Hallam University\year 2\Software Engineering\assessment 1\Meeting-Scheduler\Meeting-Scheduler-Prototype\Meeting-Scheduler\obj\Debug\Meeting-Scheduler.csproj.GenerateResource.cache
 C:\Users\jessr\OneDrive - Sheffield Hallam University\year 2\Software Engineering\assessment 1\Meeting-Scheduler\Meeting-Scheduler-Prototype\Meeting-Scheduler\obj\Debug\Meeting-Scheduler.exe
 C:\Users\jessr\OneDrive - Sheffield Hallam University\year 2\Software Engineering\assessment 1\Meeting-Scheduler\Meeting-Scheduler-Prototype\Meeting-Scheduler\obj\Debug\Meeting-Scheduler.pdb
+<<<<<<< Updated upstream
 C:\Users\jwann\Desktop\Meeting-Scheduler\Meeting-Scheduler-Prototype\Meeting-Scheduler\obj\Debug\Meeting-Scheduler.csprojAssemblyReference.cache
 C:\Users\jwann\Desktop\Meeting-Scheduler\Meeting-Scheduler-Prototype\Meeting-Scheduler\obj\Debug\Meeting_Scheduler.home.resources
 C:\Users\jwann\Desktop\Meeting-Scheduler\Meeting-Scheduler-Prototype\Meeting-Scheduler\obj\Debug\Meeting_Scheduler.loginPage.resources
@@ -33,3 +34,8 @@ C:\Users\jwann\Desktop\Meeting-Scheduler\Meeting-Scheduler-Prototype\Meeting-Sch
 C:\Users\jwann\Desktop\Meeting-Scheduler\Meeting-Scheduler-Prototype\Meeting-Scheduler\bin\Debug\Meeting-Scheduler.exe.config
 C:\Users\jwann\Desktop\Meeting-Scheduler\Meeting-Scheduler-Prototype\Meeting-Scheduler\bin\Debug\Meeting-Scheduler.exe
 C:\Users\jwann\Desktop\Meeting-Scheduler\Meeting-Scheduler-Prototype\Meeting-Scheduler\bin\Debug\Meeting-Scheduler.pdb
+=======
+C:\Users\jessr\OneDrive - Sheffield Hallam University\year 2\Software Engineering\assessment 1\Meeting-Scheduler\Meeting-Scheduler-Prototype\Meeting-Scheduler\obj\Debug\Meeting_Scheduler.home.resources
+C:\Users\jessr\OneDrive - Sheffield Hallam University\year 2\Software Engineering\assessment 1\Meeting-Scheduler\Meeting-Scheduler-Prototype\Meeting-Scheduler\obj\Debug\Meeting_Scheduler.loginPage.resources
+C:\Users\jessr\OneDrive - Sheffield Hallam University\year 2\Software Engineering\assessment 1\Meeting-Scheduler\Meeting-Scheduler-Prototype\Meeting-Scheduler\obj\Debug\Meeting_Scheduler.newMeeting.resources
+>>>>>>> Stashed changes
