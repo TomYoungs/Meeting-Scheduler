@@ -8,19 +8,23 @@ namespace Meeting_Scheduler
 {
     class Meeting
     {
-        private string title;
-        private string desc;
-        private List<User> participants;
-        private List<DateTime> slots;
-        private User initiator;
+        public string title;
+        public string desc;
+        public List<string> participants;
+        public List<DateTime> slots;
+        public string initiator;
+        public string equipment;
+        public string location;
 
-        public Meeting(string ltitle, string ldesc,User linitiator, User[] lparticipants, DateTime[] lslots) //l meaning local
+        public Meeting(string ltitle, string ldesc,string linitiator, string[] lparticipants, DateTime[] lslots,string llocation,string lequipment) //l meaning local
         {
             initiator = linitiator;
-            participants = new List<User>();
+            participants = new List<string>();
             slots = new List<DateTime>();
             title = ltitle;
             desc = ldesc;
+            location = llocation;
+            equipment = lequipment;
             participants = lparticipants.ToList();
             slots = lslots.ToList();
         }
@@ -29,6 +33,12 @@ namespace Meeting_Scheduler
 
         }
         public void editTime() {
+        }
+
+
+        public void editMeeting(Meeting userMeeting)//might have to pass in like a ID or something not sure
+        {
+            //this section
         }
     }
 }

@@ -24,7 +24,8 @@ namespace Meeting_Scheduler
             ObjectManipulation userJSON = new ObjectManipulation();
             //User userInfo = new User();
 
-            //3) polulate!
+            //3) populate!
+            
             userMeetingsCBox.Items.Add("test");//prob gonna be in a loop
             userProposedMeetingsCBox.Items.Add("test");
             userSheduledMeetingsCBox.Items.Add("test");
