@@ -27,5 +27,15 @@ namespace Meeting_Scheduler
         {
 
         }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
