@@ -1,5 +1,5 @@
 ﻿
-namespace Meeting_Scheduler.forms
+namespace Meeting_Scheduler
 {
     partial class loginPage
     {

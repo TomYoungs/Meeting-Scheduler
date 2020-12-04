@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Meeting_Scheduler.forms
+namespace Meeting_Scheduler
 {
     static class Program
     {
@@ -14,9 +14,12 @@ namespace Meeting_Scheduler.forms
         [STAThread]
         static void Main()
         {
+            void createObject() { return; }
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new loginPage());
         }
+        
+        
     }
 }

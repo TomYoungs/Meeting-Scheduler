@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Meeting_Scheduler.forms
+namespace Meeting_Scheduler
 {
     public partial class editMeeting : Form
     {

@@ -13,16 +13,20 @@ namespace Meeting_Scheduler
         private List<Meeting> yourMeetings;
         private List<Meeting> proposedMeetings;
         private List<Meeting> sheduledMeetings;
-        public User(string user) {
-            userName = user; // test 1 - Tom sucks :)
-            yourMeetings = new List<Meeting>();
-            proposedMeetings = new List<Meeting>();
-            sheduledMeetings = new List<Meeting>();
+        public User(string user,List<Meeting> lyourMeetings, List<Meeting> lproposedMeetings, List<Meeting> lsheduledMeetings) {
+            userName = user;
+            yourMeetings = lyourMeetings.ToList();
+            proposedMeetings = lproposedMeetings.ToList();
+            sheduledMeetings = lsheduledMeetings.ToList();
         }
 
         public void newMeeting(string title, string desc, string participants, DateTime[] slots)//flexible depending of how we store the data rather than void it could be bool depends
         {
-            
+            //participants
+            //pref set
+            //ex set
+            //location
+            //equipment
             foreach (DateTime slot in slots)
             {
                 

@@ -8,7 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Meeting_Scheduler.forms
+
+namespace Meeting_Scheduler
 {
     public partial class newMeeting : Form
     {
@@ -22,9 +23,9 @@ namespace Meeting_Scheduler.forms
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnSubmit_Click(object sender, EventArgs e)
         {
-            this.Close();
+
         }
     }
 }
