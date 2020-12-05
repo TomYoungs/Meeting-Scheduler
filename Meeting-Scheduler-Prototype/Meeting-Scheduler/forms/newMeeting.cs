@@ -17,12 +17,10 @@ namespace Meeting_Scheduler
         {
             InitializeComponent();
         }
-
         private void label2_Click(object sender, EventArgs e)
         {
 
         }
-
         private void btnSubmit_Click(object sender, EventArgs e)
         {
             string username = "Tom";//todo:bind this to relivant user;

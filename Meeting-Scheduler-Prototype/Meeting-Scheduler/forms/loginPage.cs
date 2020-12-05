@@ -22,21 +22,22 @@ namespace Meeting_Scheduler
 
         }
 
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
         private void label2_Click(object sender, EventArgs e)
         {
 
         }
-
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
-
         private void label3_Click(object sender, EventArgs e)
         {
 
         }
-
         private void LoginButton_Click(object sender, EventArgs e)
         {
             //if statement here if (textbox1.Text.Length > 0)

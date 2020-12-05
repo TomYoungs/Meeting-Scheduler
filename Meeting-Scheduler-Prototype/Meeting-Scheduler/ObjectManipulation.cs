@@ -8,17 +8,21 @@ namespace Meeting_Scheduler
 {
     class ObjectManipulation
     {
-        public void createObject() {
-            return;
+        public User currentUserObject;
+        public ObjectManipulation() {
+            JSON_Deserialized();//deserialize JSON and pass it into variable currentUserObject
+
         }
 
-        public User JSON_Deserialized()
+        public void JSON_Deserialized()
         {
             //grab JSON
             //Desirialise (using classes Meeting and User)
-            //todo: User userInfo = new User();//<- insert JSON! *************
-            //returning user object
-            return null;
+            //todo:(JESS) currentUserObject = new User();//<- insert JSON! *************       
+        }
+        public void JSON_Serialized()
+        {
+            //serialize object into the JSON file, you may need to re write the entire thing or just add to it not sure
         }
     }
 }

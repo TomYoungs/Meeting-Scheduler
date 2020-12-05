@@ -19,14 +19,16 @@ namespace Meeting_Scheduler
         private void home_Load(object sender, EventArgs e)
         {
             //here goes all the data dump stuff (user info etc...) seperate class for objectManipulation (serilizing and de)
-
-            //1) deserialize JSON (in another function)
-            ObjectManipulation userJSON = new ObjectManipulation();
-            //User userInfo = new User();
-
-            //3) populate!
             
-            userMeetingsCBox.Items.Add("test");//prob gonna be in a loop
+            ObjectManipulation ObjectManipulator = new ObjectManipulation();//deserialize JSON and transfer into object
+           
+            //3)todo:(JAMES) populate forms with meeting info might need to have the JSON stuff done first tho
+
+           /* for (int i = 0; i < ObjectManipulator.currentUserObject.yourMeetings.length(); i++)
+            {
+                userMeetingsCBox.Items.Add(ObjectManipulator.currentUserObject.yourMeetings[i]);//todo:(JAMES) maybe add a new function in objectManipulation to format meetings into a string or something
+            }*/
+
             userProposedMeetingsCBox.Items.Add("test");
             userSheduledMeetingsCBox.Items.Add("test");
         }
