@@ -61,5 +61,12 @@ namespace Meeting_Scheduler
                 password.Text = "INCORRECT";
             }
         }
+
+        private void btnRegister_Click(object sender, EventArgs e)
+        {
+        
+            home f1 = new home();
+            f1.Show();
+        }
     }
 }

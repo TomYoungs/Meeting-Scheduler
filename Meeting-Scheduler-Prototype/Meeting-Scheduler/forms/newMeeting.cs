@@ -30,6 +30,7 @@ namespace Meeting_Scheduler
             DateTime[] tmpslots = { date1, date2 };
             //todo:prob gonna need to validate values if we have the time
             Meeting newMeeting = new Meeting(txtTitle.Text, txtDesc.Text,username,parti,tmpslots,txtLocation.Text, txtEquipment.Text);
+            
             //todo: user.addMeeting(newMeeting); <- need to add user
         }
 

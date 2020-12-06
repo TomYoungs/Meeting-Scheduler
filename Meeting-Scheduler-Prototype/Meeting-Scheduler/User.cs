@@ -10,6 +10,7 @@ namespace Meeting_Scheduler
     class User
     {
         public string userName;
+        public string Password;
         private List<Meeting> yourMeetings;
         public List<Meeting> proposedMeetings;//might not these two 
         public List<Meeting> sheduledMeetings;//    |
