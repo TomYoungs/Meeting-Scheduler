@@ -6,17 +6,17 @@ using System.Threading.Tasks;
 
 namespace Meeting_Scheduler
 {
-    class Meeting
+    public class Meeting
     {
-        public string title;
-        public string desc;
-        public List<string> participants;
-        public List<DateTime> slots;
-        public string initiator;
-        public string equipment;
-        public string location;
+        public string title { get; set; }
+        public string desc { get; set; }
+        public List<string> participants { get; set; }
+        public List<DateTime> slots { get; set; }
+        public string initiator { get; set; }
+        public string equipment { get; set; }
+        public string location { get; set; }
 
-        public Meeting(string ltitle, string ldesc,string linitiator, string[] lparticipants, DateTime[] lslots,string llocation,string lequipment) //l meaning local
+        public Meeting(string ltitle, string ldesc,string linitiator, List<string> lparticipants, List<DateTime> lslots,string llocation,string lequipment) //l meaning local
         {
             initiator = linitiator;
             participants = new List<string>();

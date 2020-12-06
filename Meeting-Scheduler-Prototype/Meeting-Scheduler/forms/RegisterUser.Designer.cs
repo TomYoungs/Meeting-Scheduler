@@ -37,60 +37,57 @@
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(14, 61);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPassword.Location = new System.Drawing.Point(21, 94);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(114, 20);
+            this.txtPassword.Size = new System.Drawing.Size(169, 26);
             this.txtPassword.TabIndex = 3;
             // 
             // txtUsername
             // 
-            this.txtUsername.Location = new System.Drawing.Point(14, 24);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(2);
+            this.txtUsername.Location = new System.Drawing.Point(21, 37);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(114, 20);
+            this.txtUsername.Size = new System.Drawing.Size(169, 26);
             this.txtUsername.TabIndex = 4;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(11, 46);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(16, 71);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 13);
+            this.label2.Size = new System.Drawing.Size(78, 20);
             this.label2.TabIndex = 5;
             this.label2.Text = "Password";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(11, 9);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(16, 14);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 13);
+            this.label1.Size = new System.Drawing.Size(83, 20);
             this.label1.TabIndex = 6;
             this.label1.Text = "Username";
             // 
             // SubmitButton
             // 
-            this.SubmitButton.Location = new System.Drawing.Point(14, 85);
-            this.SubmitButton.Margin = new System.Windows.Forms.Padding(2);
+            this.SubmitButton.Location = new System.Drawing.Point(21, 131);
             this.SubmitButton.Name = "SubmitButton";
-            this.SubmitButton.Size = new System.Drawing.Size(56, 28);
+            this.SubmitButton.Size = new System.Drawing.Size(84, 43);
             this.SubmitButton.TabIndex = 7;
             this.SubmitButton.Text = "Submit";
             this.SubmitButton.UseVisualStyleBackColor = true;
+            this.SubmitButton.Click += new System.EventHandler(this.SubmitButton_Click);
             // 
             // RegisterUser
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(206, 199);
+            this.ClientSize = new System.Drawing.Size(309, 306);
             this.Controls.Add(this.SubmitButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.txtPassword);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "RegisterUser";
             this.Text = "RegisterUser";
             this.ResumeLayout(false);

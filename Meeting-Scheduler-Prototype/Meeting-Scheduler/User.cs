@@ -7,18 +7,20 @@ using System.Threading.Tasks;
 
 namespace Meeting_Scheduler
 {
-    class User
+    public class User
     {
-        public string userName;
-        public string Password;
-        private List<Meeting> yourMeetings;
-        public List<Meeting> proposedMeetings;//might not these two 
-        public List<Meeting> sheduledMeetings;//    |
-        public User(string user,List<Meeting> lyourMeetings, List<Meeting> lproposedMeetings, List<Meeting> lsheduledMeetings) {
+        public string userName { get; set; }
+        public string Password { get; set; }
+        private List<Meeting> yourMeetings { get; set; }
+        public List<Meeting> proposedMeetings { get; set; }//might not these two 
+        public List<Meeting> sheduledMeetings { get; set; }//    |
+        public User(string user, string pass,List<Meeting> lyourMeetings, List<Meeting> lproposedMeetings, List<Meeting> lsheduledMeetings) {
             userName = user;
-            yourMeetings = lyourMeetings.ToList();
-            proposedMeetings = lproposedMeetings.ToList();
-            sheduledMeetings = lsheduledMeetings.ToList();
+            Password = pass;
+            //lyourMeetings.CopyTo(yourMeetings);
+            yourMeetings = lyourMeetings;
+            proposedMeetings = lproposedMeetings;
+            sheduledMeetings = lsheduledMeetings;
         }
         public List<Meeting> getYourMeetings()
         {

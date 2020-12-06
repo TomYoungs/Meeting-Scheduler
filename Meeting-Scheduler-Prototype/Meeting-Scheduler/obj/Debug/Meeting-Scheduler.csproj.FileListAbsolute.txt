@@ -41,3 +41,7 @@ C:\Users\jessr\OneDrive - Sheffield Hallam University\year 2\Software Engineerin
 C:\Users\jessr\OneDrive - Sheffield Hallam University\year 2\Software Engineering\assessment 1\Meeting-Scheduler\Meeting-Scheduler-Prototype\Meeting-Scheduler\obj\Debug\Meeting_Scheduler.newMeeting.resources
 >>>>>>> Stashed changes
 >>>>>>> main
+C:\Users\jessr\OneDrive - Sheffield Hallam University\year 2\Software Engineering\assessment 1\Meeting-Scheduler\Meeting-Scheduler-Prototype\Meeting-Scheduler\obj\Debug\Meeting_Scheduler.RegisterUser.resources
+C:\Users\jessr\OneDrive - Sheffield Hallam University\year 2\Software Engineering\assessment 1\Meeting-Scheduler\Meeting-Scheduler-Prototype\Meeting-Scheduler\bin\Debug\Newtonsoft.Json.dll
+C:\Users\jessr\OneDrive - Sheffield Hallam University\year 2\Software Engineering\assessment 1\Meeting-Scheduler\Meeting-Scheduler-Prototype\Meeting-Scheduler\bin\Debug\Newtonsoft.Json.xml
+C:\Users\jessr\OneDrive - Sheffield Hallam University\year 2\Software Engineering\assessment 1\Meeting-Scheduler\Meeting-Scheduler-Prototype\Meeting-Scheduler\obj\Debug\Meeting-Scheduler.csproj.CopyComplete

@@ -21,7 +21,6 @@ namespace Meeting_Scheduler
         {
             //here goes all the data dump stuff (user info etc...) seperate class for objectManipulation (serilizing and de)
             
-            ObjectManipulation ObjectManipulator = new ObjectManipulation();//deserialize JSON and transfer into object
            
             //3)todo:(JAMES) populate forms with meeting info might need to have the JSON stuff done first tho
 

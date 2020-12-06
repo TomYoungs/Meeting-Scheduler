@@ -65,7 +65,7 @@ namespace Meeting_Scheduler
         private void btnRegister_Click(object sender, EventArgs e)
         {
         
-            home f1 = new home();
+            RegisterUser f1 = new RegisterUser();
             f1.Show();
         }
     }

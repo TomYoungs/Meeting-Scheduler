@@ -4,25 +4,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+
 namespace Meeting_Scheduler
 {
-    class ObjectManipulation
+    public static class ObjectManipulation
     {
-        public User currentUserObject;
-        public ObjectManipulation() {
-            JSON_Deserialized();//deserialize JSON and pass it into variable currentUserObject
+        // public User currentUserObject;
 
-        }
-
-        public void JSON_Deserialized()
+        public static void JSON_Deserialized()
         {
             //grab JSON
             //Desirialise (using classes Meeting and User)
             //todo:(JESS) currentUserObject = new User();//<- insert JSON! *************       
         }
-        public void JSON_Serialized()
+        public static string JSON_Serialized(User newUser)
         {
             //serialize object into the JSON file, you may need to re write the entire thing or just add to it not sure
+            return JsonConvert.SerializeObject(newUser);
         }
     }
 }

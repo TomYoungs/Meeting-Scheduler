@@ -24,10 +24,13 @@ namespace Meeting_Scheduler
         private void btnSubmit_Click(object sender, EventArgs e)
         {
             string username = "Tom";//todo:bind this to relivant user;
-            string[] parti = { "Tom", "Jess", "James" };
+            List<string> parti = new List<string>();
+            parti.Add("Jess");
             DateTime date1 = new DateTime(2015, 12, 25);
             DateTime date2 = new DateTime(2015, 12, 25);
-            DateTime[] tmpslots = { date1, date2 };
+            List<DateTime> tmpslots = new List<DateTime>();
+            tmpslots.Add(date1);
+            tmpslots.Add(date2);
             //todo:prob gonna need to validate values if we have the time
             Meeting newMeeting = new Meeting(txtTitle.Text, txtDesc.Text,username,parti,tmpslots,txtLocation.Text, txtEquipment.Text);
             

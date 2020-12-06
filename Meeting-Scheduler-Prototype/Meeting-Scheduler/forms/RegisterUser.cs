@@ -16,5 +16,11 @@ namespace Meeting_Scheduler
         {
             InitializeComponent();
         }
+
+        private void SubmitButton_Click(object sender, EventArgs e)
+        {
+            User newUser = new User(txtUsername.Text, txtPassword.Text, null, null, null);
+            string jsonString = ObjectManipulation.JSON_Serialized(newUser);
+        }
     }
 }
