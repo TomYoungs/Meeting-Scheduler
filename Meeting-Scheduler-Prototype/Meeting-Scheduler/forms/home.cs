@@ -19,18 +19,16 @@ namespace Meeting_Scheduler
         }
         private void home_Load(object sender, EventArgs e)
         {
-            //here goes all the data dump stuff (user info etc...) seperate class for objectManipulation (serilizing and de)
-            
-           
-            //3)todo:(JAMES) populate forms with meeting info might need to have the JSON stuff done first tho
+            User CurrentUser = ObjectManipulation.JSON_Deserialized("Mehmet");//todo: username should be a variable from logging in
+            //*******not very happy with this code might be better to do it with if statements or something maybe a special function for doing this idk
+            try { userMeetingsCBox.Items.Add(CurrentUser.yourMeetings.ElementAt(0)); }//becuase you can't pass in NULL into a text box you need to catch the error
+            catch (Exception){ userMeetingsCBox.Items.Add("no meetings found..."); }
 
-           /* for (int i = 0; i < ObjectManipulator.currentUserObject.yourMeetings.length(); i++)
-            {
-                userMeetingsCBox.Items.Add(ObjectManipulator.currentUserObject.yourMeetings[i]);//todo:(JAMES) maybe add a new function in objectManipulation to format meetings into a string or something
-            }*/
+            try { userProposedMeetingsCBox.Items.Add(CurrentUser.proposedMeetings.ElementAt(0)); }
+            catch (Exception) { userProposedMeetingsCBox.Items.Add("no meetings found..."); }
 
-            userProposedMeetingsCBox.Items.Add("test");
-            userSheduledMeetingsCBox.Items.Add("test");
+            try { userSheduledMeetingsCBox.Items.Add(CurrentUser.sheduledMeetings.ElementAt(0)); }
+            catch (Exception) { userSheduledMeetingsCBox.Items.Add("no meetings found..."); }
         }
         private void button1_Click(object sender, EventArgs e)
         {

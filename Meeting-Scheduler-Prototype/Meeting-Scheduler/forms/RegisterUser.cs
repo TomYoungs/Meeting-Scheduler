@@ -19,8 +19,14 @@ namespace Meeting_Scheduler
 
         private void SubmitButton_Click(object sender, EventArgs e)
         {
-            User newUser = new User(txtUsername.Text, txtPassword.Text, null, null, null);
-            string jsonString = ObjectManipulation.JSON_Serialized(newUser);
+            if (txtPassword.Text != "" && txtUsername.Text != "")
+            {
+                submitErrorLabel.Text = "";
+                User newUser = new User(txtUsername.Text, txtPassword.Text, null, null, null);
+                ObjectManipulation.JSON_Serialized(newUser);
+                this.Hide();
+            }
+            else { submitErrorLabel.Text = "error with submit"; }
         }
     }
 }

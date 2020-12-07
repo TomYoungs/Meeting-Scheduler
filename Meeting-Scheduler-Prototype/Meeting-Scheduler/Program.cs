@@ -14,7 +14,7 @@ namespace Meeting_Scheduler
         [STAThread]
         static void Main()
         {
-            void createObject() { return; }
+            
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new loginPage());

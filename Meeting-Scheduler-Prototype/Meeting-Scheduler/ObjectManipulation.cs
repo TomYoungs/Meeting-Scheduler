@@ -12,18 +12,18 @@ namespace Meeting_Scheduler
     public static class ObjectManipulation
     {
         // public User currentUserObject;
-        public static string JSON_Serialized(User newUser)
+        public static void JSON_Serialized(User newUser)
         {
             //serialize object into the JSON file, you may need to re write the entire thing or just add to it not sure
             string JsonUser = JsonConvert.SerializeObject(newUser);
-            return JsonUser;
-            
-            //return JsonConvert.SerializeObject(newUser);
+            System.IO.File.WriteAllText("JSONdata/"+newUser.userName+".json", JsonUser);//might wanna to a check on this not sure
+
         }
-        public static Object JSON_Deserialized(string JsonUser)
+        public static User JSON_Deserialized(string userName)
         {
-            User deserializedUser = JsonConvert.DeserializeObject<User>(JsonUser);
-            return deserializedUser;
+            string JSONstring = System.IO.File.ReadAllText("JSONdata/" + userName + ".json");
+            User temp =   JsonConvert.DeserializeObject<User>(JSONstring);
+            return temp;
 
             //Desirialise (using classes Meeting and User)
             //todo:(JESS) currentUserObject = new User();//<- insert JSON! *************       

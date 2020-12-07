@@ -11,20 +11,15 @@ namespace Meeting_Scheduler
     {
         public string userName { get; set; }
         public string Password { get; set; }
-        private List<Meeting> yourMeetings { get; set; }
+        public List<Meeting> yourMeetings { get; set; }
         public List<Meeting> proposedMeetings { get; set; }//might not these two 
         public List<Meeting> sheduledMeetings { get; set; }//    |
         public User(string user, string pass,List<Meeting> lyourMeetings, List<Meeting> lproposedMeetings, List<Meeting> lsheduledMeetings) {
             userName = user;
             Password = pass;
-            //lyourMeetings.CopyTo(yourMeetings);
             yourMeetings = lyourMeetings;
             proposedMeetings = lproposedMeetings;
             sheduledMeetings = lsheduledMeetings;
-        }
-        public List<Meeting> getYourMeetings()
-        {
-            return yourMeetings;
         }
         public void addMeeting(Meeting addM)
         {
