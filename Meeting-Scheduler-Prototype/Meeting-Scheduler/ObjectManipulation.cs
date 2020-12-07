@@ -20,13 +20,14 @@ namespace Meeting_Scheduler
             System.IO.File.WriteAllText("JSONdata/"+ currentUser.userName+".json", JsonUser);//might wanna to a check on this not sure
 
         }
-        public static User JSON_Deserialized(string userName)
+        public static void JSON_Deserialized(string userName)
         {
             string JSONstring = System.IO.File.ReadAllText("JSONdata/" + userName + ".json");
-            return JsonConvert.DeserializeObject<User>(JSONstring);
-
+            currentUser = JsonConvert.DeserializeObject<User>(JSONstring);
             //Desirialise (using classes Meeting and User)
             //todo:(JESS) currentUserObject = new User();//<- insert JSON! *************       
         }
+
+        //todo: create class to retrive all created user (there names)
     }
 }

@@ -15,6 +15,9 @@ namespace Meeting_Scheduler
         public List<Meeting> proposedMeetings { get; set; }//might not these two 
         public List<Meeting> sheduledMeetings { get; set; }//    |
         public User(string user, string pass,List<Meeting> lyourMeetings, List<Meeting> lproposedMeetings, List<Meeting> lsheduledMeetings) {
+            yourMeetings = new List<Meeting>();
+            proposedMeetings = new List<Meeting>();
+            sheduledMeetings = new List<Meeting>();
             userName = user;
             Password = pass;
             yourMeetings = lyourMeetings;

@@ -19,15 +19,16 @@ namespace Meeting_Scheduler
         }
         private void home_Load(object sender, EventArgs e)
         {
-            User accessedUser = ObjectManipulation.JSON_Deserialized(ObjectManipulation.currentUser.userName);
+           
+            ObjectManipulation.JSON_Deserialized("mehmet");//todo: use ObjectManipulation.currentUser.userName;
             //*******not very happy with this code might be better to do it with if statements or something maybe a special function for doing this idk
-            try { userMeetingsCBox.Items.Add(accessedUser.yourMeetings.ElementAt(0)); }//becuase you can't pass in NULL into a text box you need to catch the error
+            try { userMeetingsCBox.Items.Add(ObjectManipulation.currentUser.yourMeetings.ElementAt(0)); }//becuase you can't pass in NULL into a text box you need to catch the error
             catch (Exception){ userMeetingsCBox.Items.Add("no meetings found..."); }
 
-            try { userProposedMeetingsCBox.Items.Add(accessedUser.proposedMeetings.ElementAt(0)); }
+            try { userProposedMeetingsCBox.Items.Add(ObjectManipulation.currentUser.proposedMeetings.ElementAt(0)); }
             catch (Exception) { userProposedMeetingsCBox.Items.Add("no meetings found..."); }
 
-            try { userSheduledMeetingsCBox.Items.Add(accessedUser.sheduledMeetings.ElementAt(0)); }
+            try { userSheduledMeetingsCBox.Items.Add(ObjectManipulation.currentUser.sheduledMeetings.ElementAt(0)); }
             catch (Exception) { userSheduledMeetingsCBox.Items.Add("no meetings found..."); }
         }
         private void button1_Click(object sender, EventArgs e)

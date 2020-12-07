@@ -19,10 +19,16 @@ namespace Meeting_Scheduler
         {
             InitializeComponent();
         }
-        private void label2_Click(object sender, EventArgs e)
+        private void newMeeting_Load(object sender, EventArgs e)
         {
-
+            string[] userlist = { "Tom", "Jess", "James", "Mehmet" };
+            foreach (string user in userlist)
+            {
+                checkedListParticipants.Items.Add(user);
+                participants.Add(user);
+            }
         }
+        
         private void btnSubmit_Click(object sender, EventArgs e)
         {
             /*string username = "Tom";//todo:bind this to relivant user;
@@ -35,11 +41,18 @@ namespace Meeting_Scheduler
             tmpslots.Add(date2);*/
             //todo:prob gonna need to validate values if we have the time
             //List<object> participants = checkedListParticipants.CheckedItems.IndexOf();
+            
+            Meeting newMeeting = new Meeting(txtTitle.Text, txtDesc.Text, ObjectManipulation.currentUser.userName, participants, slots,txtLocation.Text, txtEquipment.Text);
+            ObjectManipulation.currentUser.yourMeetings.Add(newMeeting);
+            ObjectManipulation.JSON_Serialized(ObjectManipulation.currentUser);
 
-           Meeting newMeeting = new Meeting(txtTitle.Text, txtDesc.Text, ObjectManipulation.currentUser.userName, participants, slots,txtLocation.Text, txtEquipment.Text);
-            //add meeting to user object
         }
 
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            checkedListSlots.Items.Add(dataTimePicker.Value);
+            slots.Add(dataTimePicker.Value);
+        }
         private void checkedListParticipants_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -48,17 +61,13 @@ namespace Meeting_Scheduler
         {
 
         }
-
         private void dateTimePicker_ValueChanged(object sender, EventArgs e)
         {
 
         }
-
-        private void btnAdd_Click(object sender, EventArgs e)
+        private void label2_Click(object sender, EventArgs e)
         {
 
-            checkedListSlots.Items.Add(dataTimePicker.Value);
-            slots.Add(dataTimePicker.Value);
         }
     }
 }

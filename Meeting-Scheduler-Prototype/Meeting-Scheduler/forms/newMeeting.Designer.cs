@@ -116,13 +116,6 @@ namespace Meeting_Scheduler
             // checkedListParticipants
             // 
             this.checkedListParticipants.FormattingEnabled = true;
-            this.checkedListParticipants.Items.AddRange(new object[] {
-            "Mike",
-            "Tom",
-            "Jess",
-            "James",
-            "Gilbert",
-            "Roger"});
             this.checkedListParticipants.Location = new System.Drawing.Point(9, 193);
             this.checkedListParticipants.Margin = new System.Windows.Forms.Padding(2);
             this.checkedListParticipants.Name = "checkedListParticipants";
@@ -217,6 +210,7 @@ namespace Meeting_Scheduler
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "newMeeting";
             this.Text = "Form2";
+            this.Load += new System.EventHandler(this.newMeeting_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
