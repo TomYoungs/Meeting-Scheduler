@@ -23,7 +23,7 @@ namespace Meeting_Scheduler
             yourMeetings = lyourMeetings;
             proposedMeetings = lproposedMeetings;
             sheduledMeetings = lsheduledMeetings;
-        }
+        } 
         public void addMeeting(Meeting addM)
         {
             //maybe a check, assert, try catch?

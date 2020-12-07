@@ -1,1 +1,1 @@
-{"userName":"Mehmet","Password":"Ozcan123","yourMeetings":null,"proposedMeetings":null,"sheduledMeetings":null}
+{"userName":"Mehmet","Password":"Ozcan","yourMeetings":[{"title":"Tom","desc":"Tom","participants":["Tom","Jess","James","Mehmet"],"slots":["2020-12-07T15:13:55.1044608+00:00","2020-12-07T15:13:55.1044608+00:00","2020-12-07T15:13:55.1044608+00:00"],"initiator":"Mehmet","equipment":"Tom","location":"Tom"}],"proposedMeetings":[],"sheduledMeetings":[]}

@@ -18,7 +18,6 @@ namespace Meeting_Scheduler
             //serialize object into the JSON file, you may need to re write the entire thing or just add to it not sure
             string JsonUser = JsonConvert.SerializeObject(currentUser);
             System.IO.File.WriteAllText("JSONdata/"+ currentUser.userName+".json", JsonUser);//might wanna to a check on this not sure
-
         }
         public static void JSON_Deserialized(string userName)
         {

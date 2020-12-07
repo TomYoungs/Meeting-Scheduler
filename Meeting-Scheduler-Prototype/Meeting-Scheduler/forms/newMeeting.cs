@@ -43,7 +43,7 @@ namespace Meeting_Scheduler
             //List<object> participants = checkedListParticipants.CheckedItems.IndexOf();
             
             Meeting newMeeting = new Meeting(txtTitle.Text, txtDesc.Text, ObjectManipulation.currentUser.userName, participants, slots,txtLocation.Text, txtEquipment.Text);
-            ObjectManipulation.currentUser.yourMeetings.Add(newMeeting);
+            ObjectManipulation.currentUser.addMeeting(newMeeting);
             ObjectManipulation.JSON_Serialized(ObjectManipulation.currentUser);
 
         }
