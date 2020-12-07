@@ -42,9 +42,9 @@ namespace Meeting_Scheduler
             //todo:prob gonna need to validate values if we have the time
             //List<object> participants = checkedListParticipants.CheckedItems.IndexOf();
             
-            Meeting newMeeting = new Meeting(txtTitle.Text, txtDesc.Text, ObjectManipulation.currentUser.userName, participants, slots,txtLocation.Text, txtEquipment.Text);
-            ObjectManipulation.currentUser.addMeeting(newMeeting);
-            ObjectManipulation.JSON_Serialized(ObjectManipulation.currentUser);
+            Meeting newMeeting = new Meeting(txtTitle.Text, txtDesc.Text, ObjectManipulation.UserCollection.listOfUsers[ObjectManipulation.CurrentUserIndex].userName, participants, slots,txtLocation.Text, txtEquipment.Text);
+            ObjectManipulation.UserCollection.listOfUsers[ObjectManipulation.CurrentUserIndex].addMeeting(newMeeting);
+            ObjectManipulation.JSON_Serialized(ObjectManipulation.UserCollection);
 
         }
 

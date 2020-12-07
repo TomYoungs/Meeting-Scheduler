@@ -92,6 +92,7 @@
     <Compile Include="forms\RegisterUser.Designer.cs">
       <DependentUpon>RegisterUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="ListUsers.cs" />
     <Compile Include="Meeting.cs" />
     <Compile Include="forms\newMeeting.cs">
       <SubType>Form</SubType>

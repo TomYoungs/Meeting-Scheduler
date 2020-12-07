@@ -19,20 +19,21 @@ namespace Meeting_Scheduler
         }
         private void home_Load(object sender, EventArgs e)
         {           
-            ObjectManipulation.JSON_Deserialized("mehmet");//todo: use ObjectManipulation.currentUser.userName;
+            ObjectManipulation.JSON_Deserialized();//todo: use ObjectManipulation.currentUser.userName;
             //todo: format this data correctly |
             //                                 V
-            try {
-                    foreach (Meeting item in ObjectManipulation.currentUser.yourMeetings)
+            try
+            {
+                foreach (Meeting item in ObjectManipulation.UserCollection.listOfUsers[ObjectManipulation.CurrentUserIndex].yourMeetings)
                     {
                         checkedListYourM.Items.Add(item.title); 
                     }//becuase you can't pass in NULL into a text box you need to catch the error
 
-                    foreach (Meeting item in ObjectManipulation.currentUser.proposedMeetings)
+                    foreach (Meeting item in ObjectManipulation.UserCollection.listOfUsers[ObjectManipulation.CurrentUserIndex].proposedMeetings)
                     {
                         checkedListProposedM.Items.Add(item.title);
                     }
-                    foreach (Meeting item in ObjectManipulation.currentUser.sheduledMeetings)
+                    foreach (Meeting item in ObjectManipulation.UserCollection.listOfUsers[ObjectManipulation.CurrentUserIndex].sheduledMeetings)
                     {
                        checkedListSheduledM.Items.Add(item.title);
                     }
