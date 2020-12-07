@@ -160,7 +160,7 @@ namespace Meeting_Scheduler
             // 
             // dataTimePicker
             // 
-            this.dataTimePicker.CustomFormat = "dd/MM/yyyy hh:mm:ss";
+            this.dataTimePicker.CustomFormat = "dd/MM/yyyy hh:mm tt";
             this.dataTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dataTimePicker.Location = new System.Drawing.Point(9, 292);
             this.dataTimePicker.Name = "dataTimePicker";
