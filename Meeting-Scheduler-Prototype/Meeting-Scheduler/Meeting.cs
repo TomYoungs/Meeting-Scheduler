@@ -25,8 +25,8 @@ namespace Meeting_Scheduler
             desc = ldesc;
             location = llocation;
             equipment = lequipment;
-            participants = lparticipants.ToList();
-            slots = lslots.ToList();
+            participants = lparticipants;
+            slots = lslots;
         }
         public void editParticipants()//could be bool we shall see
         {

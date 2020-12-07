@@ -23,8 +23,6 @@ namespace Meeting_Scheduler
         {
             string JSONstring = System.IO.File.ReadAllText("JSONdata/" + userName + ".json");
             currentUser = JsonConvert.DeserializeObject<User>(JSONstring);
-            //Desirialise (using classes Meeting and User)
-            //todo:(JESS) currentUserObject = new User();//<- insert JSON! *************       
         }
 
         //todo: create class to retrive all created user (there names)
