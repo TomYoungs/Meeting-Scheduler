@@ -43,8 +43,10 @@ namespace Meeting_Scheduler
         }
         private void button1_Click(object sender, EventArgs e)
         {
+
             newMeeting f1 = new newMeeting();
             f1.Show();
+            this.Close();
         }
 
         private void button2_Click(object sender, EventArgs e)

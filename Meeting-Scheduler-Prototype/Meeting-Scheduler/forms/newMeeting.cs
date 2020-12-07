@@ -31,21 +31,13 @@ namespace Meeting_Scheduler
         
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            /*string username = "Tom";//todo:bind this to relivant user;
-            List<string> parti = new List<string>();
-            parti.Add("Jess");
-            DateTime date1 = new DateTime(2015, 12, 25);
-            DateTime date2 = new DateTime(2015, 12, 25);
-            List<DateTime> tmpslots = new List<DateTime>();
-            tmpslots.Add(date1);
-            tmpslots.Add(date2);*/
-            //todo:prob gonna need to validate values if we have the time
-            //List<object> participants = checkedListParticipants.CheckedItems.IndexOf();
-            
             Meeting newMeeting = new Meeting(txtTitle.Text, txtDesc.Text, ObjectManipulation.UserCollection.listOfUsers[ObjectManipulation.CurrentUserIndex].userName, participants, slots,txtLocation.Text, txtEquipment.Text);
             ObjectManipulation.UserCollection.listOfUsers[ObjectManipulation.CurrentUserIndex].addMeeting(newMeeting);
             ObjectManipulation.JSON_Serialized(ObjectManipulation.UserCollection);
 
+            this.Hide();
+            home f1 = new home();
+            f1.Show();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
