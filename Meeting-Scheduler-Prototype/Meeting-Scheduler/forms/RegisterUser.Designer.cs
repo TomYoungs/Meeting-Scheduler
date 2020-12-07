@@ -39,7 +39,7 @@
             // txtPassword
             // 
             this.txtPassword.Location = new System.Drawing.Point(14, 61);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(2);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(114, 20);
             this.txtPassword.TabIndex = 3;
@@ -47,7 +47,7 @@
             // txtUsername
             // 
             this.txtUsername.Location = new System.Drawing.Point(14, 24);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(2);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(114, 20);
             this.txtUsername.TabIndex = 4;
@@ -75,7 +75,7 @@
             // SubmitButton
             // 
             this.SubmitButton.Location = new System.Drawing.Point(14, 85);
-            this.SubmitButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SubmitButton.Margin = new System.Windows.Forms.Padding(2);
             this.SubmitButton.Name = "SubmitButton";
             this.SubmitButton.Size = new System.Drawing.Size(56, 28);
             this.SubmitButton.TabIndex = 7;
@@ -95,6 +95,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Pink;
             this.ClientSize = new System.Drawing.Size(206, 199);
             this.Controls.Add(this.submitErrorLabel);
             this.Controls.Add(this.SubmitButton);

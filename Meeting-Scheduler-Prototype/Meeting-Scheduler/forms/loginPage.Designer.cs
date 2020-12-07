@@ -41,7 +41,7 @@ namespace Meeting_Scheduler
             // username
             // 
             this.username.Location = new System.Drawing.Point(129, 131);
-            this.username.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.username.Margin = new System.Windows.Forms.Padding(2);
             this.username.Name = "username";
             this.username.Size = new System.Drawing.Size(114, 20);
             this.username.TabIndex = 0;
@@ -50,7 +50,7 @@ namespace Meeting_Scheduler
             // password
             // 
             this.password.Location = new System.Drawing.Point(129, 183);
-            this.password.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.password.Margin = new System.Windows.Forms.Padding(2);
             this.password.Name = "password";
             this.password.Size = new System.Drawing.Size(109, 20);
             this.password.TabIndex = 1;
@@ -91,7 +91,7 @@ namespace Meeting_Scheduler
             // LoginButton
             // 
             this.LoginButton.Location = new System.Drawing.Point(155, 207);
-            this.LoginButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.LoginButton.Margin = new System.Windows.Forms.Padding(2);
             this.LoginButton.Name = "LoginButton";
             this.LoginButton.Size = new System.Drawing.Size(56, 28);
             this.LoginButton.TabIndex = 5;
@@ -101,7 +101,7 @@ namespace Meeting_Scheduler
             // 
             // btnRegister
             // 
-            this.btnRegister.Location = new System.Drawing.Point(282, 61);
+            this.btnRegister.Location = new System.Drawing.Point(282, 11);
             this.btnRegister.Margin = new System.Windows.Forms.Padding(2);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(77, 22);
@@ -114,6 +114,7 @@ namespace Meeting_Scheduler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Pink;
             this.ClientSize = new System.Drawing.Size(370, 300);
             this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.LoginButton);
@@ -122,7 +123,7 @@ namespace Meeting_Scheduler
             this.Controls.Add(this.label1);
             this.Controls.Add(this.password);
             this.Controls.Add(this.username);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "loginPage";
             this.Text = "login";
             this.Load += new System.EventHandler(this.Form1_Load);

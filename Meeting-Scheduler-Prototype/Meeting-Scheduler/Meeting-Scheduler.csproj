@@ -119,6 +119,9 @@
     <EmbeddedResource Include="forms\newMeeting.resx">
       <DependentUpon>newMeeting.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="forms\Preference.resx">
+      <DependentUpon>Preference.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="forms\RegisterUser.resx">
       <DependentUpon>RegisterUser.cs</DependentUpon>
     </EmbeddedResource>
