@@ -66,5 +66,10 @@ namespace Meeting_Scheduler
         {
 
         }
+
+        private void txtLocation_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

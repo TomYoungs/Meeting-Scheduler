@@ -91,5 +91,10 @@ namespace Meeting_Scheduler
         {
 
         }
+
+        private void checkedListProposedM_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
