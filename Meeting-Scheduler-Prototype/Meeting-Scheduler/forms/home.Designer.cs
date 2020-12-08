@@ -46,7 +46,7 @@ namespace Meeting_Scheduler
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(23, 9);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(79, 29);
             this.button1.TabIndex = 0;
@@ -57,7 +57,7 @@ namespace Meeting_Scheduler
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(23, 42);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(79, 29);
             this.button2.TabIndex = 1;
@@ -68,7 +68,7 @@ namespace Meeting_Scheduler
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(295, 99);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(79, 29);
             this.button3.TabIndex = 2;
@@ -145,6 +145,7 @@ namespace Meeting_Scheduler
             this.btnEditProposal.TabIndex = 13;
             this.btnEditProposal.Text = "Edit Proposal";
             this.btnEditProposal.UseVisualStyleBackColor = true;
+            this.btnEditProposal.Click += new System.EventHandler(this.btnEditProposal_Click);
             // 
             // btnAcceptProposal
             // 
@@ -175,7 +176,7 @@ namespace Meeting_Scheduler
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "home";
             this.Text = "home";
             this.Load += new System.EventHandler(this.home_Load);

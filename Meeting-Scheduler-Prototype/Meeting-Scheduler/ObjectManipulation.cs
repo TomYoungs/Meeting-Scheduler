@@ -40,6 +40,20 @@ namespace Meeting_Scheduler
             }
 
         }
+        public static bool timeIsAvailable(DateTime chosenTime)
+        {
+            for (int userCounter = 0; userCounter < UserCollection.listOfUsers.Count; userCounter++)
+            {
+                foreach (Meeting item in UserCollection.listOfUsers[userCounter].yourMeetings)
+                {
+                    if (item.slots.Contains(chosenTime))//needs to be withing an hour
+                    {
+                        return false;
+                    }
+                }     
+            }
+            return true;
+        }
         
         //todo: create class to retrive all created user (there names)
     }

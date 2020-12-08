@@ -83,5 +83,10 @@ namespace Meeting_Scheduler
             f1.Show();
             
         }
+
+        private void btnEditProposal_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -31,20 +31,29 @@ namespace Meeting_Scheduler
         
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            Meeting newMeeting = new Meeting(txtTitle.Text, txtDesc.Text, ObjectManipulation.UserCollection.listOfUsers[ObjectManipulation.CurrentUserIndex].userName, participants, slots,txtLocation.Text, txtEquipment.Text);
-            ObjectManipulation.UserCollection.listOfUsers[ObjectManipulation.CurrentUserIndex].addMeeting(newMeeting);            
-            ObjectManipulation.updateProposedMeetings(participants, newMeeting);
-            ObjectManipulation.JSON_Serialized(ObjectManipulation.UserCollection);
+            
+                
+                Meeting newMeeting = new Meeting(txtTitle.Text, txtDesc.Text, ObjectManipulation.UserCollection.listOfUsers[ObjectManipulation.CurrentUserIndex].userName, participants, slots,txtLocation.Text, txtEquipment.Text);
+                ObjectManipulation.UserCollection.listOfUsers[ObjectManipulation.CurrentUserIndex].addMeeting(newMeeting);            
+                ObjectManipulation.updateProposedMeetings(participants, newMeeting);
+                ObjectManipulation.JSON_Serialized(ObjectManipulation.UserCollection);
 
-            this.Hide();
-            home f1 = new home();
-            f1.Show();
+                this.Hide();
+                home f1 = new home();
+                f1.Show();
+                
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            checkedListSlots.Items.Add(dataTimePicker.Value);
-            slots.Add(dataTimePicker.Value);
+
+            if (ObjectManipulation.timeIsAvailable(dataTimePicker.Value))
+            {
+                timeSlotError.Text = "";
+                checkedListSlots.Items.Add(dataTimePicker.Value);
+                slots.Add(dataTimePicker.Value);
+            }
+            else { timeSlotError.Text = "time slot taken"; }
         }
         private void checkedListParticipants_SelectedIndexChanged(object sender, EventArgs e)
         {
