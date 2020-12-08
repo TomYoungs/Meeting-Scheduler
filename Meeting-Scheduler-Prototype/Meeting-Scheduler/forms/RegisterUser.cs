@@ -35,11 +35,11 @@ namespace Meeting_Scheduler
                 List<Meeting> yourM = new List<Meeting>();
                 List<Meeting> proposedM = new List<Meeting>();
                 List<Meeting> sheduledM = new List<Meeting>();
-                ListUsers listOfUsers = new ListUsers();
+               
                 User newUser = new User(txtUsername.Text, txtPassword.Text, yourM, proposedM, sheduledM);
-                listOfUsers.listOfUsers.Add(newUser);
-                ObjectManipulation.JSON_Serialized(listOfUsers);
-                this.Hide();
+                ObjectManipulation.UserCollection.listOfUsers.Add(newUser);
+                ObjectManipulation.JSON_Serialized(ObjectManipulation.UserCollection);
+                this.Close();
             }
             else { submitErrorLabel.Text = "error with submit"; }
         }

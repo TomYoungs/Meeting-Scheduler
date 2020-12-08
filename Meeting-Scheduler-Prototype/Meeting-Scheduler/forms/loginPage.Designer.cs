@@ -36,6 +36,7 @@ namespace Meeting_Scheduler
             this.label3 = new System.Windows.Forms.Label();
             this.LoginButton = new System.Windows.Forms.Button();
             this.btnRegister = new System.Windows.Forms.Button();
+            this.loginErrorLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // username
@@ -110,12 +111,21 @@ namespace Meeting_Scheduler
             this.btnRegister.UseVisualStyleBackColor = true;
             this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
+            // loginErrorLabel
+            // 
+            this.loginErrorLabel.AutoSize = true;
+            this.loginErrorLabel.Location = new System.Drawing.Point(43, 162);
+            this.loginErrorLabel.Name = "loginErrorLabel";
+            this.loginErrorLabel.Size = new System.Drawing.Size(0, 13);
+            this.loginErrorLabel.TabIndex = 7;
+            // 
             // loginPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Pink;
             this.ClientSize = new System.Drawing.Size(370, 300);
+            this.Controls.Add(this.loginErrorLabel);
             this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.LoginButton);
             this.Controls.Add(this.label3);
@@ -141,6 +151,7 @@ namespace Meeting_Scheduler
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button LoginButton;
         private System.Windows.Forms.Button btnRegister;
+        private System.Windows.Forms.Label loginErrorLabel;
     }
 }
 

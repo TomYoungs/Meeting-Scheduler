@@ -19,7 +19,14 @@ namespace Meeting_Scheduler
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            try
+            {
+                ObjectManipulation.JSON_Deserialized();
+            }
+            catch (Exception)
+            {
+                ObjectManipulation.JSON_Serialized(null);
+            }        
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -39,47 +46,37 @@ namespace Meeting_Scheduler
 
         }
         private void LoginButton_Click(object sender, EventArgs e)
-        { 
-            ObjectManipulation.JSON_Deserialized();
-            String searchName = username.Text;
-            int counter = 0;
-            bool leavingCondition = true;
-            while (leavingCondition)
-            {
-                if(ObjectManipulation.UserCollection.listOfUsers[counter].userName == searchName)
+        {
+            if(ObjectManipulation.UserCollection != null) {
+                loginErrorLabel.Text = "";
+                String searchName = username.Text;
+                int counter = 0;
+                bool leavingCondition = true;
+                while (leavingCondition)
                 {
-                    ObjectManipulation.CurrentUserIndex = counter;
-                    this.Hide();
-                    home f1 = new home();
-                    f1.Show();
-                    leavingCondition = false;
+                    if (ObjectManipulation.UserCollection.listOfUsers[counter].userName == searchName)
+                    {
+                        ObjectManipulation.CurrentUserIndex = counter;
+                        this.Hide();
+                        home f1 = new home();
+                        f1.Show();
+                        leavingCondition = false;
+                    }
+                    else if (ObjectManipulation.UserCollection.listOfUsers[counter].userName == null)
+                    {
+                        loginErrorLabel.Text = "login failed";
+                        leavingCondition = false;
+                    }
+                    counter++;
                 }
-                else if(ObjectManipulation.UserCollection.listOfUsers[counter].userName == null)
-                {
-                    leavingCondition = false;
-                }
+                leavingCondition = true;
+
+
             }
-            leavingCondition = true;
-
-
-            //if statement here if (textbox1.Text.Length > 0)
-            /* if (username.Text == "Mehmet" && password.Text == "Ozcan123")
-             {
-
-             }
-             else if (username.Text != "Mehmet" && password.Text == "Ozcan123")
-             {
-                 username.Text = "INCORRECT";
-             }
-             else if (username.Text == "Mehmet" && password.Text != "Ozcan123")
-             {
-                 password.Text = "INCORRECT";
-             }
-             else
-             {
-                 username.Text = "INCORRECT";
-                 password.Text = "INCORRECT";
-             }*/
+            else
+            {
+                loginErrorLabel.Text = "please create a user";
+            }
         }
 
         private void btnRegister_Click(object sender, EventArgs e)

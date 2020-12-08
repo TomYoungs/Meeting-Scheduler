@@ -19,11 +19,32 @@ namespace Meeting_Scheduler
         }
         private void home_Load(object sender, EventArgs e)
         {           
-            ObjectManipulation.JSON_Deserialized();//todo: use ObjectManipulation.currentUser.userName;
-            //todo: format this data correctly |
-            //                                 V
-            try
+            //todo: use ObjectManipulation.currentUser.userName;
+                                           
+            try//problem here with the concurrency proposed meetings dont appear when the user doesn't have any of there own meetings
             {
+
+                //proposed meetings
+                //ObjectManipulation.CurrentUserIndex
+                //prob could make this more simple but idk
+                foreach (User item in ObjectManipulation.UserCollection.listOfUsers)
+                {
+                    if (item.userName != ObjectManipulation.UserCollection.listOfUsers[ObjectManipulation.CurrentUserIndex].userName)
+                    {
+                        string mainName = ObjectManipulation.UserCollection.listOfUsers[ObjectManipulation.CurrentUserIndex].userName;
+                        for (int i = 0; i < item.yourMeetings.Count; i++)
+                        {
+                            if (!(ObjectManipulation.UserCollection.listOfUsers[ObjectManipulation.CurrentUserIndex].proposedMeetings.Contains(item.yourMeetings[i])) && item.yourMeetings[i].participants.Contains(mainName))//does the participants list contain mainName? and does this meeting already exist in participants
+                            {
+                                ObjectManipulation.UserCollection.listOfUsers[ObjectManipulation.CurrentUserIndex].addProposedMeeting(item.yourMeetings[i]);
+                            }
+                            
+                            
+                        }
+
+                    }
+                }
+
                 foreach (Meeting item in ObjectManipulation.UserCollection.listOfUsers[ObjectManipulation.CurrentUserIndex].yourMeetings)
                     {
                         checkedListYourM.Items.Add(item.title); 
@@ -37,6 +58,11 @@ namespace Meeting_Scheduler
                     {
                        checkedListSheduledM.Items.Add(item.title);
                     }
+
+                
+                    
+                    //sheduled meetings
+
             }
             catch (Exception){ errorLabel.Text = "no meetings found..."; }
 

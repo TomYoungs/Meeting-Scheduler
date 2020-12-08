@@ -29,5 +29,10 @@ namespace Meeting_Scheduler
             //maybe a check, assert, try catch?
             yourMeetings.Add(addM);
         }
+
+        public void addProposedMeeting(Meeting addM)
+        {
+            proposedMeetings.Add(addM);
+        }
     }
 }

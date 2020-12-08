@@ -21,7 +21,7 @@ namespace Meeting_Scheduler
         }
         private void newMeeting_Load(object sender, EventArgs e)
         {
-            string[] userlist = { "Tom", "Jess", "James", "Mehmet" };
+            string[] userlist = { "Tom", "Jess", "James", "Mehmet", "dave" };
             foreach (string user in userlist)
             {
                 checkedListParticipants.Items.Add(user);
