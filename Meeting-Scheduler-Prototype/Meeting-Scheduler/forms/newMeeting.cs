@@ -32,7 +32,8 @@ namespace Meeting_Scheduler
         private void btnSubmit_Click(object sender, EventArgs e)
         {
             Meeting newMeeting = new Meeting(txtTitle.Text, txtDesc.Text, ObjectManipulation.UserCollection.listOfUsers[ObjectManipulation.CurrentUserIndex].userName, participants, slots,txtLocation.Text, txtEquipment.Text);
-            ObjectManipulation.UserCollection.listOfUsers[ObjectManipulation.CurrentUserIndex].addMeeting(newMeeting);
+            ObjectManipulation.UserCollection.listOfUsers[ObjectManipulation.CurrentUserIndex].addMeeting(newMeeting);            
+            ObjectManipulation.updateProposedMeetings(participants, newMeeting);
             ObjectManipulation.JSON_Serialized(ObjectManipulation.UserCollection);
 
             this.Hide();

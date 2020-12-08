@@ -26,7 +26,21 @@ namespace Meeting_Scheduler
             string JSONstring = System.IO.File.ReadAllText("JSONdata/collection.json");
             UserCollection = JsonConvert.DeserializeObject<ListUsers>(JSONstring);
         }
+        public static void updateProposedMeetings(List<string> participants, Meeting newMeeting)
+        {
+            foreach (string parti in participants)
+            {
+                for (int userCounter = 0; userCounter < UserCollection.listOfUsers.Count; userCounter++)
+                {
+                    if (UserCollection.listOfUsers[userCounter].userName == parti)
+                    {
+                        UserCollection.listOfUsers[userCounter].addProposedMeeting(newMeeting);
+                    }
+                }
+            }
 
+        }
+        
         //todo: create class to retrive all created user (there names)
     }
 }
