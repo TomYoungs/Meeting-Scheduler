@@ -34,5 +34,27 @@ namespace Meeting_Scheduler
         {
             proposedMeetings.Add(addM);
         }
+        public void removeProposedMeeting(Meeting addM)
+        {
+            proposedMeetings.Remove(addM);
+        }
+        public void addSheduledMeeting(Meeting addM)
+        {
+            sheduledMeetings.Add(addM);
+        }
+        public void acceptSheduledMeeting(string meetingName)
+        {
+            for (int i = 0; i < proposedMeetings.Count; i++)
+            {
+                if(proposedMeetings[i].title == meetingName)
+                {
+                    addSheduledMeeting(proposedMeetings[i]);
+                    removeProposedMeeting(proposedMeetings[i]);
+                }
+
+            }
+             
+            
+        }
     }
 }
