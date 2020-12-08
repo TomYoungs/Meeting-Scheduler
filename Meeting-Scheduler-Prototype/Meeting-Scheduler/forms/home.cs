@@ -29,7 +29,7 @@ namespace Meeting_Scheduler
                 //prob could make this more simple but idk
                 foreach (Meeting item in ObjectManipulation.UserCollection.listOfUsers[ObjectManipulation.CurrentUserIndex].yourMeetings)
                 {
-                        checkedListYourM.Items.Add(item.title); 
+                    checkedListYourM.Items.Add(item.title); 
                 }//becuase you can't pass in NULL into a text box you need to catch the error
 
                 foreach (Meeting item in ObjectManipulation.UserCollection.listOfUsers[ObjectManipulation.CurrentUserIndex].proposedMeetings)
@@ -38,7 +38,7 @@ namespace Meeting_Scheduler
                 }
                 foreach (Meeting item in ObjectManipulation.UserCollection.listOfUsers[ObjectManipulation.CurrentUserIndex].sheduledMeetings)
                 {
-                  checkedListSheduledM.Items.Add(item.title);
+                    checkedListSheduledM.Items.Add(item.title);
                 }
 
             }
@@ -52,19 +52,16 @@ namespace Meeting_Scheduler
             f1.Show();
             this.Close();
         }
-
         private void button2_Click(object sender, EventArgs e)
         {
            Preference f1 = new Preference();
             f1.Show();
         }
-
         private void button3_Click(object sender, EventArgs e)
         {
             editMeeting f1 = new editMeeting();
             f1.Show();
         }
-
         private void checkedListYourM_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -80,8 +77,7 @@ namespace Meeting_Scheduler
             }
             this.Close();
             home f1 = new home();
-            f1.Show();
-            
+            f1.Show();           
         }
 
         private void btnEditProposal_Click(object sender, EventArgs e)
