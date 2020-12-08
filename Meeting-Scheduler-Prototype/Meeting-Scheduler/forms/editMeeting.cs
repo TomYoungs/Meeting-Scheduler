@@ -16,5 +16,12 @@ namespace Meeting_Scheduler
         {
             InitializeComponent();
         }
+
+        private void btnSubmit_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            home f1 = new home();
+            f1.Show();
+        }
     }
 }

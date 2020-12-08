@@ -43,10 +43,10 @@ namespace Meeting_Scheduler
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(23, 9);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Location = new System.Drawing.Point(31, 11);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(79, 29);
+            this.button1.Size = new System.Drawing.Size(105, 36);
             this.button1.TabIndex = 0;
             this.button1.Text = "New Meeting";
             this.button1.UseVisualStyleBackColor = true;
@@ -54,10 +54,10 @@ namespace Meeting_Scheduler
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(23, 42);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Location = new System.Drawing.Point(31, 52);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(79, 29);
+            this.button2.Size = new System.Drawing.Size(105, 36);
             this.button2.TabIndex = 1;
             this.button2.Text = "Preference";
             this.button2.UseVisualStyleBackColor = true;
@@ -65,10 +65,10 @@ namespace Meeting_Scheduler
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(295, 99);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button3.Location = new System.Drawing.Point(393, 122);
+            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(79, 29);
+            this.button3.Size = new System.Drawing.Size(105, 36);
             this.button3.TabIndex = 2;
             this.button3.Text = "Edit Meeting";
             this.button3.UseVisualStyleBackColor = true;
@@ -77,68 +77,76 @@ namespace Meeting_Scheduler
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(54, 99);
+            this.label1.Location = new System.Drawing.Point(72, 122);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(72, 13);
+            this.label1.Size = new System.Drawing.Size(97, 17);
             this.label1.TabIndex = 5;
             this.label1.Text = "your meetings";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(54, 218);
+            this.label2.Location = new System.Drawing.Point(72, 268);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(96, 13);
+            this.label2.Size = new System.Drawing.Size(129, 17);
             this.label2.TabIndex = 6;
             this.label2.Text = "proposed meetings";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(54, 335);
+            this.label3.Location = new System.Drawing.Point(72, 412);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(101, 13);
+            this.label3.Size = new System.Drawing.Size(134, 17);
             this.label3.TabIndex = 7;
             this.label3.Text = "scheduled meetings";
             // 
             // checkedListYourM
             // 
             this.checkedListYourM.FormattingEnabled = true;
-            this.checkedListYourM.Location = new System.Drawing.Point(170, 99);
+            this.checkedListYourM.Location = new System.Drawing.Point(227, 122);
+            this.checkedListYourM.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkedListYourM.Name = "checkedListYourM";
-            this.checkedListYourM.Size = new System.Drawing.Size(120, 94);
+            this.checkedListYourM.Size = new System.Drawing.Size(159, 106);
             this.checkedListYourM.TabIndex = 9;
+            this.checkedListYourM.SelectedIndexChanged += new System.EventHandler(this.checkedListYourM_SelectedIndexChanged);
             // 
             // checkedListProposedM
             // 
             this.checkedListProposedM.FormattingEnabled = true;
-            this.checkedListProposedM.Location = new System.Drawing.Point(170, 218);
+            this.checkedListProposedM.Location = new System.Drawing.Point(227, 268);
+            this.checkedListProposedM.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkedListProposedM.Name = "checkedListProposedM";
-            this.checkedListProposedM.Size = new System.Drawing.Size(120, 94);
+            this.checkedListProposedM.Size = new System.Drawing.Size(159, 106);
             this.checkedListProposedM.TabIndex = 10;
             // 
             // checkedListSheduledM
             // 
             this.checkedListSheduledM.FormattingEnabled = true;
-            this.checkedListSheduledM.Location = new System.Drawing.Point(170, 335);
+            this.checkedListSheduledM.Location = new System.Drawing.Point(227, 412);
+            this.checkedListSheduledM.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkedListSheduledM.Name = "checkedListSheduledM";
-            this.checkedListSheduledM.Size = new System.Drawing.Size(120, 94);
+            this.checkedListSheduledM.Size = new System.Drawing.Size(159, 106);
             this.checkedListSheduledM.TabIndex = 11;
             // 
             // errorLabel
             // 
             this.errorLabel.AutoSize = true;
-            this.errorLabel.Location = new System.Drawing.Point(203, 69);
+            this.errorLabel.Location = new System.Drawing.Point(271, 85);
+            this.errorLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.errorLabel.Name = "errorLabel";
-            this.errorLabel.Size = new System.Drawing.Size(0, 13);
+            this.errorLabel.Size = new System.Drawing.Size(0, 17);
             this.errorLabel.TabIndex = 12;
             // 
             // home
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Pink;
-            this.ClientSize = new System.Drawing.Size(495, 482);
+            this.ClientSize = new System.Drawing.Size(660, 593);
             this.Controls.Add(this.errorLabel);
             this.Controls.Add(this.checkedListSheduledM);
             this.Controls.Add(this.checkedListProposedM);
@@ -149,7 +157,7 @@ namespace Meeting_Scheduler
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "home";
             this.Text = "home";
             this.Load += new System.EventHandler(this.home_Load);

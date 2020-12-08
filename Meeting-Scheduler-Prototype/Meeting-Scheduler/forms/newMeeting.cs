@@ -61,5 +61,10 @@ namespace Meeting_Scheduler
         {
 
         }
+
+        private void checkedListParticipants_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

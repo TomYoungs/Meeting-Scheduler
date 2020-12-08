@@ -87,6 +87,9 @@ namespace Meeting_Scheduler
             f1.Show();
         }
 
-        
+        private void checkedListYourM_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
