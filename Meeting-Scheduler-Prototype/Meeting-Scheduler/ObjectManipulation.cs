@@ -46,7 +46,7 @@ namespace Meeting_Scheduler
             {
                 foreach (Meeting item in UserCollection.listOfUsers[userCounter].yourMeetings)
                 {
-                    if (item.slots.Contains(chosenTime))//needs to be withing an hour
+                    if (item.slots.Contains(chosenTime))//needs to be within an hour
                     {
                         return false;
                     }

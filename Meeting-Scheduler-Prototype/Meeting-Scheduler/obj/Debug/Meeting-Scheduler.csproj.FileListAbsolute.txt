@@ -58,3 +58,6 @@ C:\Users\jwann\Desktop\Meeting-Scheduler\Meeting-Scheduler-Prototype\Meeting-Sch
 C:\Users\jwann\Desktop\Meeting-Scheduler\Meeting-Scheduler-Prototype\Meeting-Scheduler\obj\Debug\Meeting-Scheduler.csproj.CopyComplete
 C:\Users\tomfy\OneDrive - Sheffield Hallam University\Uni\Projects Visual Studio\Meeting-Scheduler\Meeting-Scheduler-Prototype\Meeting-Scheduler\obj\Debug\Meeting_Scheduler.editMeeting.resources
 C:\Users\tomfy\OneDrive - Sheffield Hallam University\Uni\Projects Visual Studio\Meeting-Scheduler\Meeting-Scheduler-Prototype\Meeting-Scheduler\obj\Debug\Meeting_Scheduler.forms.editProposal.resources
+C:\Users\jessr\OneDrive - Sheffield Hallam University\year 2\Software Engineering\assessment 1\Meeting-Scheduler\Meeting-Scheduler-Prototype\Meeting-Scheduler\obj\Debug\Meeting_Scheduler.editMeeting.resources
+C:\Users\jessr\OneDrive - Sheffield Hallam University\year 2\Software Engineering\assessment 1\Meeting-Scheduler\Meeting-Scheduler-Prototype\Meeting-Scheduler\obj\Debug\Meeting_Scheduler.forms.editProposal.resources
+C:\Users\jessr\OneDrive - Sheffield Hallam University\year 2\Software Engineering\assessment 1\Meeting-Scheduler\Meeting-Scheduler-Prototype\Meeting-Scheduler\obj\Debug\Meeting_Scheduler.Preference.resources
