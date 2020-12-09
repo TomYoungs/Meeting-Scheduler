@@ -21,31 +21,32 @@ namespace Meeting_Scheduler
         }
         private void newMeeting_Load(object sender, EventArgs e)
         {
-            /*string[] userlist = { "Tom", "Jess", "James", "Mehmet", "dave" };
-            foreach (string user in userlist)
+            participants = ObjectManipulation.getParticipantsList();
+            foreach (string user in participants)
             {
                 checkedListParticipants.Items.Add(user);
-                participants.Add(user);
-            }*/
+            }
         }
         
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-                foreach (string item in .CheckedItems)
-                {
-                ObjectManipulation.UserCollection.listOfUsers[ObjectManipulation.CurrentUserIndex].acceptSheduledMeeting(item);
-                ObjectManipulation.JSON_Serialized(ObjectManipulation.UserCollection);
+            List<string> selectedParticipants = new List<string>(); 
+            foreach (string item in checkedListParticipants.CheckedItems)
+            {
+                selectedParticipants.Add(item);
+            }
 
-                }
-            
-                Meeting newMeeting = new Meeting(txtTitle.Text, txtDesc.Text, ObjectManipulation.UserCollection.listOfUsers[ObjectManipulation.CurrentUserIndex].userName, participants, slots,txtLocation.Text, txtEquipment.Text);
-                ObjectManipulation.UserCollection.listOfUsers[ObjectManipulation.CurrentUserIndex].addMeeting(newMeeting);            
-                ObjectManipulation.updateProposedMeetings(participants, newMeeting);
-                ObjectManipulation.JSON_Serialized(ObjectManipulation.UserCollection);
+            Meeting newMeeting = new Meeting(txtTitle.Text, txtDesc.Text,
+            ObjectManipulation.UserCollection.listOfUsers[ObjectManipulation.CurrentUserIndex].userName,
+            selectedParticipants, slots,txtLocation.Text, txtEquipment.Text);
 
-                this.Hide();
-                home f1 = new home();
-                f1.Show();   
+            ObjectManipulation.UserCollection.listOfUsers[ObjectManipulation.CurrentUserIndex].addMeeting(newMeeting);            
+            ObjectManipulation.updateProposedMeetings(selectedParticipants, newMeeting);
+            ObjectManipulation.JSON_Serialized(ObjectManipulation.UserCollection);
+
+            this.Hide();
+            home f1 = new home();
+            f1.Show();   
         }
 
         private void btnAdd_Click(object sender, EventArgs e)

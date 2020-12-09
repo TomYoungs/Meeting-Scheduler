@@ -32,10 +32,12 @@ namespace Meeting_Scheduler
             {
                 for (int userCounter = 0; userCounter < UserCollection.listOfUsers.Count; userCounter++)
                 {
-                    if (UserCollection.listOfUsers[userCounter].userName == parti)
-                    {
-                        UserCollection.listOfUsers[userCounter].addProposedMeeting(newMeeting);
-                    }
+                    if (!(UserCollection.listOfUsers[CurrentUserIndex].userName == parti)){
+                        if (UserCollection.listOfUsers[userCounter].userName == parti)
+                        {
+                            UserCollection.listOfUsers[userCounter].addProposedMeeting(newMeeting);
+                        }
+                    }   
                 }
             }
 
@@ -46,13 +48,23 @@ namespace Meeting_Scheduler
             {
                 foreach (Meeting item in UserCollection.listOfUsers[userCounter].yourMeetings)
                 {
-                    if (item.slots.Contains(chosenTime))//needs to be within an hour
+                    if (item.slots.Contains(chosenTime))//todo: needs to be within an hour
                     {
                         return false;
                     }
                 }     
             }
             return true;
+        }
+
+        public static List<string> getParticipantsList()
+        {
+            List<string> participants = new List<string>();
+            foreach (User item in UserCollection.listOfUsers)
+            {
+                participants.Add(item.userName);
+            }
+            return participants;
         }
         
         //todo: create class to retrive all created user (there names)
