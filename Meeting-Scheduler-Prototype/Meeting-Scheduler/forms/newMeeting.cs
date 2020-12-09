@@ -41,12 +41,7 @@ namespace Meeting_Scheduler
             {
                 selectedParticipants.Add(item);
             }
-            /*string loc;
-            foreach (string item in )
-            {
-                string loc = item;
-            }*/
-
+            
             (bool,DateTime) validBoolTime = ObjectManipulation.isLocationValid(checkedListLocations.CheckedItems[0].ToString(), slots);
             if (validBoolTime.Item1)
             {

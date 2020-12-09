@@ -22,16 +22,6 @@ namespace Meeting_Scheduler
             if (txtPassword.Text != "" && txtUsername.Text != "")
             {
                 submitErrorLabel.Text = "";
-               /* List<string> testParticipants = new List<string>();
-                testParticipants.Add("x");
-                testParticipants.Add("x");
-
-                List<DateTime> testSlots = new List<DateTime>();
-                DateTime date = new DateTime(11, 11, 11);
-                testSlots.Add(date);
-                testSlots.Add(date);
-                Meeting test = new Meeting("x", "x", "you", testParticipants, testSlots, "earth", "nothing");*/
-
                 List<Meeting> yourM = new List<Meeting>();
                 List<Meeting> proposedM = new List<Meeting>();
                 List<Meeting> sheduledM = new List<Meeting>();

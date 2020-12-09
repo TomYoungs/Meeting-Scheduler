@@ -64,7 +64,7 @@ namespace Meeting_Scheduler
                         loginErrorLabel.Text = "login failed";
                         leavingCondition = false;
                     }
-                    else if (ObjectManipulation.UserCollection.listOfUsers[counter].userName == searchName) //THROWING ERRORS WHYYY
+                    else if (ObjectManipulation.UserCollection.listOfUsers[counter].userName == searchName)
                     {
                         if (ObjectManipulation.UserCollection.listOfUsers[counter].Password == searchPW)
                         {
