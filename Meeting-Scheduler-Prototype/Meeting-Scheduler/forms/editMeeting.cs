@@ -12,6 +12,8 @@ namespace Meeting_Scheduler
 {
     public partial class editMeeting : Form
     {
+        List<string> participants = new List<string>();
+        List<DateTime> slots = new List<DateTime>();
         public editMeeting()
         {
             InitializeComponent();

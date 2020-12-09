@@ -38,7 +38,6 @@ namespace Meeting_Scheduler
                     }
                 }
             }
-
         }
         public static bool timeIsAvailable(DateTime chosenTime)
         {
@@ -46,7 +45,11 @@ namespace Meeting_Scheduler
             {
                 foreach (Meeting item in UserCollection.listOfUsers[userCounter].yourMeetings)
                 {
+<<<<<<< HEAD
                     if (item.slots.Contains(chosenTime))//needs to be within an hour
+=======
+                    if (item.slots.Contains(chosenTime))//todo: needs to be withing an hour
+>>>>>>> main
                     {
                         return false;
                     }

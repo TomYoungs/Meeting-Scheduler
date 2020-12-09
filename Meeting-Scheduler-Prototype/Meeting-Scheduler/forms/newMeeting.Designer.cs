@@ -149,6 +149,7 @@ namespace Meeting_Scheduler
             this.txtLocation.Name = "txtLocation";
             this.txtLocation.Size = new System.Drawing.Size(202, 20);
             this.txtLocation.TabIndex = 14;
+            this.txtLocation.TextChanged += new System.EventHandler(this.txtLocation_TextChanged);
             // 
             // label6
             // 
