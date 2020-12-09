@@ -14,6 +14,7 @@ namespace Meeting_Scheduler
        // public static User currentUser;   //might be redundant       
         public static ListUsers UserCollection;
         public static int CurrentUserIndex;
+        
 
         public static void JSON_Serialized(ListUsers UserCollection)
         {
@@ -67,6 +68,29 @@ namespace Meeting_Scheduler
             return participants;
         }
         
-        //todo: create class to retrive all created user (there names)
+        public static (bool, DateTime) isLocationValid(string checkLocation, List<DateTime> slots)//double return ooooo
+        {
+            for (int userCounter = 0; userCounter < UserCollection.listOfUsers.Count; userCounter++)
+            {
+                foreach (Meeting item in UserCollection.listOfUsers[userCounter].yourMeetings)
+                {
+                    foreach (DateTime time in slots)
+                    {
+                        if(item.location == checkLocation)
+                        {
+                            foreach (DateTime slot in item.slots)//slot is the search slot whereas time is the slot passes in (selected)
+                            {
+                                if(slot.Hour == time.Hour)//assume each meeting is upwards of an hour
+                                {
+                                    return (false, time);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            DateTime t1 = new DateTime();
+            return (true,t1);
+        }
     }
 }

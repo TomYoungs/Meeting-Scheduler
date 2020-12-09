@@ -15,6 +15,7 @@ namespace Meeting_Scheduler
     {
         List<DateTime> slots = new List<DateTime>();
         List<string> participants = new List<string>();
+        string[] locations = { "Room 1", "Room 2", "Cafe", "Office", "lounge" };
         public newMeeting()
         {
             InitializeComponent();
@@ -26,6 +27,11 @@ namespace Meeting_Scheduler
             {
                 checkedListParticipants.Items.Add(user);
             }
+
+            foreach (string place in locations)
+            {
+                checkedListLocations.Items.Add(place);
+            }
         }
         
         private void btnSubmit_Click(object sender, EventArgs e)
@@ -35,18 +41,32 @@ namespace Meeting_Scheduler
             {
                 selectedParticipants.Add(item);
             }
+            /*string loc;
+            foreach (string item in )
+            {
+                string loc = item;
+            }*/
 
-            Meeting newMeeting = new Meeting(txtTitle.Text, txtDesc.Text,
-            ObjectManipulation.UserCollection.listOfUsers[ObjectManipulation.CurrentUserIndex].userName,
-            selectedParticipants, slots,txtLocation.Text, txtEquipment.Text);
+            (bool,DateTime) validBoolTime = ObjectManipulation.isLocationValid(checkedListLocations.CheckedItems[0].ToString(), slots);
+            if (validBoolTime.Item1)
+            {
+                string selectedLocation = (checkedListLocations.CheckedItems[0]).ToString();
+                Meeting newMeeting = new Meeting(txtTitle.Text, txtDesc.Text,
+                ObjectManipulation.UserCollection.listOfUsers[ObjectManipulation.CurrentUserIndex].userName,
+                selectedParticipants, slots, selectedLocation, txtEquipment.Text);
 
-            ObjectManipulation.UserCollection.listOfUsers[ObjectManipulation.CurrentUserIndex].addMeeting(newMeeting);            
-            ObjectManipulation.updateProposedMeetings(selectedParticipants, newMeeting);
-            ObjectManipulation.JSON_Serialized(ObjectManipulation.UserCollection);
-
-            this.Hide();
-            home f1 = new home();
-            f1.Show();   
+                ObjectManipulation.UserCollection.listOfUsers[ObjectManipulation.CurrentUserIndex].addMeeting(newMeeting);
+                ObjectManipulation.updateProposedMeetings(selectedParticipants, newMeeting);
+                ObjectManipulation.JSON_Serialized(ObjectManipulation.UserCollection);
+                this.Hide();
+                home f1 = new home();
+                f1.Show();
+            }
+            else
+            {
+                locationErrorLabel.Text = "location is not available at time '" + validBoolTime.Item2 + "' please re-enter";
+            }
+              
         }
 
         private void btnAdd_Click(object sender, EventArgs e)

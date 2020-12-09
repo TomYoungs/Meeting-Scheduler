@@ -36,15 +36,16 @@ namespace Meeting_Scheduler
             this.txtTitle = new System.Windows.Forms.TextBox();
             this.txtDesc = new System.Windows.Forms.TextBox();
             this.btnSubmit = new System.Windows.Forms.Button();
-            this.checkedListParticipants = new System.Windows.Forms.CheckedListBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtEquipment = new System.Windows.Forms.TextBox();
-            this.txtLocation = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.dataTimePicker = new System.Windows.Forms.DateTimePicker();
             this.btnAdd = new System.Windows.Forms.Button();
             this.checkedListSlots = new System.Windows.Forms.CheckedListBox();
             this.timeSlotError = new System.Windows.Forms.Label();
+            this.checkedListLocations = new System.Windows.Forms.CheckedListBox();
+            this.locationErrorLabel = new System.Windows.Forms.Label();
+            this.checkedListParticipants = new System.Windows.Forms.CheckedListBox();
             this.SuspendLayout();
             // 
             // label1
@@ -71,7 +72,7 @@ namespace Meeting_Scheduler
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(8, 178);
+            this.label3.Location = new System.Drawing.Point(9, 118);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(62, 13);
@@ -81,7 +82,7 @@ namespace Meeting_Scheduler
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(8, 273);
+            this.label4.Location = new System.Drawing.Point(6, 184);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(88, 13);
@@ -91,7 +92,7 @@ namespace Meeting_Scheduler
             // txtTitle
             // 
             this.txtTitle.Location = new System.Drawing.Point(11, 24);
-            this.txtTitle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTitle.Margin = new System.Windows.Forms.Padding(2);
             this.txtTitle.Name = "txtTitle";
             this.txtTitle.Size = new System.Drawing.Size(202, 20);
             this.txtTitle.TabIndex = 5;
@@ -99,7 +100,7 @@ namespace Meeting_Scheduler
             // txtDesc
             // 
             this.txtDesc.Location = new System.Drawing.Point(11, 60);
-            this.txtDesc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDesc.Margin = new System.Windows.Forms.Padding(2);
             this.txtDesc.Name = "txtDesc";
             this.txtDesc.Size = new System.Drawing.Size(202, 20);
             this.txtDesc.TabIndex = 6;
@@ -114,16 +115,6 @@ namespace Meeting_Scheduler
             this.btnSubmit.UseVisualStyleBackColor = true;
             this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
-            // checkedListParticipants
-            // 
-            this.checkedListParticipants.FormattingEnabled = true;
-            this.checkedListParticipants.Location = new System.Drawing.Point(9, 193);
-            this.checkedListParticipants.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.checkedListParticipants.Name = "checkedListParticipants";
-            this.checkedListParticipants.Size = new System.Drawing.Size(202, 49);
-            this.checkedListParticipants.TabIndex = 11;
-            this.checkedListParticipants.SelectedIndexChanged += new System.EventHandler(this.checkedListParticipants_SelectedIndexChanged_1);
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -137,23 +128,15 @@ namespace Meeting_Scheduler
             // txtEquipment
             // 
             this.txtEquipment.Location = new System.Drawing.Point(11, 96);
-            this.txtEquipment.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtEquipment.Margin = new System.Windows.Forms.Padding(2);
             this.txtEquipment.Name = "txtEquipment";
             this.txtEquipment.Size = new System.Drawing.Size(202, 20);
             this.txtEquipment.TabIndex = 13;
             // 
-            // txtLocation
-            // 
-            this.txtLocation.Location = new System.Drawing.Point(11, 140);
-            this.txtLocation.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txtLocation.Name = "txtLocation";
-            this.txtLocation.Size = new System.Drawing.Size(202, 20);
-            this.txtLocation.TabIndex = 14;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(12, 125);
+            this.label6.Location = new System.Drawing.Point(9, 321);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(48, 13);
@@ -164,7 +147,7 @@ namespace Meeting_Scheduler
             // 
             this.dataTimePicker.CustomFormat = "dd/MM/yyyy hh:mm tt";
             this.dataTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dataTimePicker.Location = new System.Drawing.Point(9, 292);
+            this.dataTimePicker.Location = new System.Drawing.Point(9, 200);
             this.dataTimePicker.Name = "dataTimePicker";
             this.dataTimePicker.Size = new System.Drawing.Size(202, 20);
             this.dataTimePicker.TabIndex = 18;
@@ -172,7 +155,7 @@ namespace Meeting_Scheduler
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(217, 292);
+            this.btnAdd.Location = new System.Drawing.Point(217, 200);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(43, 20);
             this.btnAdd.TabIndex = 19;
@@ -183,8 +166,8 @@ namespace Meeting_Scheduler
             // checkedListSlots
             // 
             this.checkedListSlots.FormattingEnabled = true;
-            this.checkedListSlots.Location = new System.Drawing.Point(9, 317);
-            this.checkedListSlots.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkedListSlots.Location = new System.Drawing.Point(9, 225);
+            this.checkedListSlots.Margin = new System.Windows.Forms.Padding(2);
             this.checkedListSlots.Name = "checkedListSlots";
             this.checkedListSlots.Size = new System.Drawing.Size(202, 94);
             this.checkedListSlots.TabIndex = 20;
@@ -197,18 +180,47 @@ namespace Meeting_Scheduler
             this.timeSlotError.Size = new System.Drawing.Size(0, 13);
             this.timeSlotError.TabIndex = 21;
             // 
+            // checkedListLocations
+            // 
+            this.checkedListLocations.CheckOnClick = true;
+            this.checkedListLocations.FormattingEnabled = true;
+            this.checkedListLocations.Location = new System.Drawing.Point(9, 336);
+            this.checkedListLocations.Margin = new System.Windows.Forms.Padding(2);
+            this.checkedListLocations.Name = "checkedListLocations";
+            this.checkedListLocations.Size = new System.Drawing.Size(202, 49);
+            this.checkedListLocations.TabIndex = 22;
+            // 
+            // locationErrorLabel
+            // 
+            this.locationErrorLabel.AutoSize = true;
+            this.locationErrorLabel.Location = new System.Drawing.Point(225, 336);
+            this.locationErrorLabel.Name = "locationErrorLabel";
+            this.locationErrorLabel.Size = new System.Drawing.Size(0, 13);
+            this.locationErrorLabel.TabIndex = 23;
+            // 
+            // checkedListParticipants
+            // 
+            this.checkedListParticipants.FormattingEnabled = true;
+            this.checkedListParticipants.Location = new System.Drawing.Point(9, 133);
+            this.checkedListParticipants.Margin = new System.Windows.Forms.Padding(2);
+            this.checkedListParticipants.Name = "checkedListParticipants";
+            this.checkedListParticipants.Size = new System.Drawing.Size(202, 49);
+            this.checkedListParticipants.TabIndex = 11;
+            this.checkedListParticipants.SelectedIndexChanged += new System.EventHandler(this.checkedListParticipants_SelectedIndexChanged_1);
+            // 
             // newMeeting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Pink;
             this.ClientSize = new System.Drawing.Size(455, 513);
+            this.Controls.Add(this.locationErrorLabel);
+            this.Controls.Add(this.checkedListLocations);
             this.Controls.Add(this.timeSlotError);
             this.Controls.Add(this.checkedListSlots);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.dataTimePicker);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.txtLocation);
             this.Controls.Add(this.txtEquipment);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.checkedListParticipants);
@@ -219,7 +231,7 @@ namespace Meeting_Scheduler
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "newMeeting";
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.newMeeting_Load);
@@ -237,14 +249,15 @@ namespace Meeting_Scheduler
         private System.Windows.Forms.TextBox txtTitle;
         private System.Windows.Forms.TextBox txtDesc;
         private System.Windows.Forms.Button btnSubmit;
-        private System.Windows.Forms.CheckedListBox checkedListParticipants;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtEquipment;
-        private System.Windows.Forms.TextBox txtLocation;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DateTimePicker dataTimePicker;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.CheckedListBox checkedListSlots;
         private System.Windows.Forms.Label timeSlotError;
+        private System.Windows.Forms.CheckedListBox checkedListLocations;
+        private System.Windows.Forms.Label locationErrorLabel;
+        private System.Windows.Forms.CheckedListBox checkedListParticipants;
     }
 }
