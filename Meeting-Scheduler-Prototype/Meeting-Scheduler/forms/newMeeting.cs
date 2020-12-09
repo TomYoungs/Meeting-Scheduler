@@ -31,13 +31,17 @@ namespace Meeting_Scheduler
         
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            Meeting newMeeting = new Meeting(txtTitle.Text, txtDesc.Text, ObjectManipulation.UserCollection.listOfUsers[ObjectManipulation.CurrentUserIndex].userName, participants, slots,txtLocation.Text, txtEquipment.Text);
-            ObjectManipulation.UserCollection.listOfUsers[ObjectManipulation.CurrentUserIndex].addMeeting(newMeeting);
-            ObjectManipulation.JSON_Serialized(ObjectManipulation.UserCollection);
+            
+                
+                Meeting newMeeting = new Meeting(txtTitle.Text, txtDesc.Text, ObjectManipulation.UserCollection.listOfUsers[ObjectManipulation.CurrentUserIndex].userName, participants, slots,txtLocation.Text, txtEquipment.Text);
+                ObjectManipulation.UserCollection.listOfUsers[ObjectManipulation.CurrentUserIndex].addMeeting(newMeeting);            
+                ObjectManipulation.updateProposedMeetings(participants, newMeeting);
+                ObjectManipulation.JSON_Serialized(ObjectManipulation.UserCollection);
 
-            this.Hide();
-            home f1 = new home();
-            f1.Show();
+                this.Hide();
+                home f1 = new home();
+                f1.Show();
+                
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -63,11 +67,6 @@ namespace Meeting_Scheduler
         }
 
         private void checkedListParticipants_SelectedIndexChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtLocation_TextChanged(object sender, EventArgs e)
         {
 
         }

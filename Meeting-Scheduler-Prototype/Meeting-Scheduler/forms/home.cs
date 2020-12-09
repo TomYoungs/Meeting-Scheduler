@@ -29,20 +29,14 @@ namespace Meeting_Scheduler
                 //prob could make this more simple but idk
                 foreach (User item in ObjectManipulation.UserCollection.listOfUsers)
                 {
-                    if (item.userName != ObjectManipulation.UserCollection.listOfUsers[ObjectManipulation.CurrentUserIndex].userName)
-                    {
-                        string mainName = ObjectManipulation.UserCollection.listOfUsers[ObjectManipulation.CurrentUserIndex].userName;
-                        for (int i = 0; i < item.yourMeetings.Count; i++)
-                        {
-                            if (!(ObjectManipulation.UserCollection.listOfUsers[ObjectManipulation.CurrentUserIndex].proposedMeetings.Contains(item.yourMeetings[i])) && item.yourMeetings[i].participants.Contains(mainName))//does the participants list contain mainName? and does this meeting already exist in participants
-                            {
-                                ObjectManipulation.UserCollection.listOfUsers[ObjectManipulation.CurrentUserIndex].addProposedMeeting(item.yourMeetings[i]);
-                            }
-                            
-                            
-                        }
+                        checkedListYourM.Items.Add(item.title); 
+                }//becuase you can't pass in NULL into a text box you need to catch the error
 
                     }
+                }
+                foreach (Meeting item in ObjectManipulation.UserCollection.listOfUsers[ObjectManipulation.CurrentUserIndex].sheduledMeetings)
+                {
+                  checkedListSheduledM.Items.Add(item.title);
                 }
 
                 foreach (Meeting item in ObjectManipulation.UserCollection.listOfUsers[ObjectManipulation.CurrentUserIndex].yourMeetings)
@@ -92,7 +86,21 @@ namespace Meeting_Scheduler
 
         }
 
-        private void checkedListProposedM_SelectedIndexChanged(object sender, EventArgs e)
+        private void btnAcceptProposal_Click(object sender, EventArgs e)
+        {
+            foreach (string item in checkedListProposedM.CheckedItems)
+            {
+                ObjectManipulation.UserCollection.listOfUsers[ObjectManipulation.CurrentUserIndex].acceptSheduledMeeting(item);
+                ObjectManipulation.JSON_Serialized(ObjectManipulation.UserCollection);
+                
+            }
+            this.Close();
+            home f1 = new home();
+            f1.Show();
+            
+        }
+
+        private void btnEditProposal_Click(object sender, EventArgs e)
         {
 
         }

@@ -122,7 +122,6 @@ namespace Meeting_Scheduler
             this.checkedListProposedM.Name = "checkedListProposedM";
             this.checkedListProposedM.Size = new System.Drawing.Size(159, 106);
             this.checkedListProposedM.TabIndex = 10;
-            this.checkedListProposedM.SelectedIndexChanged += new System.EventHandler(this.checkedListProposedM_SelectedIndexChanged);
             // 
             // checkedListSheduledM
             // 
