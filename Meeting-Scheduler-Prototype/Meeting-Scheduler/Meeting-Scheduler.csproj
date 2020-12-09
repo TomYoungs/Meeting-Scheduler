@@ -74,6 +74,12 @@
     <Compile Include="forms\editMeeting.Designer.cs">
       <DependentUpon>editMeeting.cs</DependentUpon>
     </Compile>
+    <Compile Include="forms\editProposal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\editProposal.Designer.cs">
+      <DependentUpon>editProposal.cs</DependentUpon>
+    </Compile>
     <Compile Include="forms\home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,6 +118,9 @@
     <Compile Include="User.cs" />
     <EmbeddedResource Include="forms\editMeeting.resx">
       <DependentUpon>editMeeting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\editProposal.resx">
+      <DependentUpon>editProposal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\home.resx">
       <DependentUpon>home.cs</DependentUpon>
