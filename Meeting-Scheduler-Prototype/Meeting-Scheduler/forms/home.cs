@@ -29,16 +29,16 @@ namespace Meeting_Scheduler
                 //prob could make this more simple but idk
                 foreach (Meeting item in ObjectManipulation.UserCollection.listOfUsers[ObjectManipulation.CurrentUserIndex].yourMeetings)
                 {
-                    checkedListYourM.Items.Add(item.title); 
+                    checkedListYourM.Items.Add(item.title + " - at: " + item.slots[0] + " - in: " +item.location); 
                 }//becuase you can't pass in NULL into a text box you need to catch the error
 
                 foreach (Meeting item in ObjectManipulation.UserCollection.listOfUsers[ObjectManipulation.CurrentUserIndex].proposedMeetings)
                 {
-                    checkedListProposedM.Items.Add(item.title);
+                    checkedListProposedM.Items.Add(item.title + " - at: " + item.slots[0] + " - in: " + item.location);
                 }
                 foreach (Meeting item in ObjectManipulation.UserCollection.listOfUsers[ObjectManipulation.CurrentUserIndex].sheduledMeetings)
                 {
-                    checkedListSheduledM.Items.Add(item.title);
+                    checkedListSheduledM.Items.Add(item.title + " - at: " + item.slots[0] + " - in: " + item.location);
                 }
 
             }

@@ -39,7 +39,6 @@ namespace Meeting_Scheduler
             this.checkedListProposedM = new System.Windows.Forms.CheckedListBox();
             this.checkedListSheduledM = new System.Windows.Forms.CheckedListBox();
             this.errorLabel = new System.Windows.Forms.Label();
-            this.btnEditProposal = new System.Windows.Forms.Button();
             this.btnAcceptProposal = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -67,7 +66,7 @@ namespace Meeting_Scheduler
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(295, 99);
+            this.button3.Location = new System.Drawing.Point(378, 99);
             this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(79, 29);
@@ -88,7 +87,7 @@ namespace Meeting_Scheduler
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(54, 218);
+            this.label2.Location = new System.Drawing.Point(30, 218);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(96, 13);
             this.label2.TabIndex = 6;
@@ -97,7 +96,7 @@ namespace Meeting_Scheduler
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(54, 335);
+            this.label3.Location = new System.Drawing.Point(25, 335);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(101, 13);
             this.label3.TabIndex = 7;
@@ -106,26 +105,29 @@ namespace Meeting_Scheduler
             // checkedListYourM
             // 
             this.checkedListYourM.FormattingEnabled = true;
-            this.checkedListYourM.Location = new System.Drawing.Point(170, 99);
+            this.checkedListYourM.HorizontalScrollbar = true;
+            this.checkedListYourM.Location = new System.Drawing.Point(132, 99);
             this.checkedListYourM.Name = "checkedListYourM";
-            this.checkedListYourM.Size = new System.Drawing.Size(120, 79);
+            this.checkedListYourM.Size = new System.Drawing.Size(241, 79);
             this.checkedListYourM.TabIndex = 9;
             this.checkedListYourM.SelectedIndexChanged += new System.EventHandler(this.checkedListYourM_SelectedIndexChanged);
             // 
             // checkedListProposedM
             // 
             this.checkedListProposedM.FormattingEnabled = true;
-            this.checkedListProposedM.Location = new System.Drawing.Point(170, 218);
+            this.checkedListProposedM.HorizontalScrollbar = true;
+            this.checkedListProposedM.Location = new System.Drawing.Point(132, 218);
             this.checkedListProposedM.Name = "checkedListProposedM";
-            this.checkedListProposedM.Size = new System.Drawing.Size(120, 79);
+            this.checkedListProposedM.Size = new System.Drawing.Size(241, 79);
             this.checkedListProposedM.TabIndex = 10;
             // 
             // checkedListSheduledM
             // 
             this.checkedListSheduledM.FormattingEnabled = true;
-            this.checkedListSheduledM.Location = new System.Drawing.Point(170, 335);
+            this.checkedListSheduledM.HorizontalScrollbar = true;
+            this.checkedListSheduledM.Location = new System.Drawing.Point(132, 335);
             this.checkedListSheduledM.Name = "checkedListSheduledM";
-            this.checkedListSheduledM.Size = new System.Drawing.Size(120, 79);
+            this.checkedListSheduledM.Size = new System.Drawing.Size(241, 79);
             this.checkedListSheduledM.TabIndex = 11;
             // 
             // errorLabel
@@ -135,17 +137,6 @@ namespace Meeting_Scheduler
             this.errorLabel.Name = "errorLabel";
             this.errorLabel.Size = new System.Drawing.Size(0, 13);
             this.errorLabel.TabIndex = 12;
-            // 
-            // btnEditProposal
-            // 
-            this.btnEditProposal.Location = new System.Drawing.Point(295, 218);
-            this.btnEditProposal.Margin = new System.Windows.Forms.Padding(2);
-            this.btnEditProposal.Name = "btnEditProposal";
-            this.btnEditProposal.Size = new System.Drawing.Size(79, 29);
-            this.btnEditProposal.TabIndex = 13;
-            this.btnEditProposal.Text = "Edit Proposal";
-            this.btnEditProposal.UseVisualStyleBackColor = true;
-            this.btnEditProposal.Click += new System.EventHandler(this.btnEditProposal_Click);
             // 
             // btnAcceptProposal
             // 
@@ -165,7 +156,6 @@ namespace Meeting_Scheduler
             this.BackColor = System.Drawing.Color.Pink;
             this.ClientSize = new System.Drawing.Size(495, 482);
             this.Controls.Add(this.btnAcceptProposal);
-            this.Controls.Add(this.btnEditProposal);
             this.Controls.Add(this.errorLabel);
             this.Controls.Add(this.checkedListSheduledM);
             this.Controls.Add(this.checkedListProposedM);
@@ -197,7 +187,6 @@ namespace Meeting_Scheduler
         private System.Windows.Forms.CheckedListBox checkedListProposedM;
         private System.Windows.Forms.CheckedListBox checkedListSheduledM;
         private System.Windows.Forms.Label errorLabel;
-        private System.Windows.Forms.Button btnEditProposal;
         private System.Windows.Forms.Button btnAcceptProposal;
     }
 }
