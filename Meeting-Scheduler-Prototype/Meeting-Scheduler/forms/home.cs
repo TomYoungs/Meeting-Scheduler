@@ -29,16 +29,16 @@ namespace Meeting_Scheduler
                 //prob could make this more simple but idk
                 foreach (Meeting item in ObjectManipulation.UserCollection.listOfUsers[ObjectManipulation.CurrentUserIndex].yourMeetings)
                 {
-                    checkedListYourM.Items.Add(item.title + " - at: " + item.slots[0] + " - in: " +item.location); 
+                    checkedListYourM.Items.Add(item.title + "- at: " + item.slots[0] + " - in: " +item.location); 
                 }//becuase you can't pass in NULL into a text box you need to catch the error
 
                 foreach (Meeting item in ObjectManipulation.UserCollection.listOfUsers[ObjectManipulation.CurrentUserIndex].proposedMeetings)
                 {
-                    checkedListProposedM.Items.Add(item.title + " - at: " + item.slots[0] + " - in: " + item.location);
+                    checkedListProposedM.Items.Add(item.title + "- at: " + item.slots[0] + " - in: " + item.location);
                 }
                 foreach (Meeting item in ObjectManipulation.UserCollection.listOfUsers[ObjectManipulation.CurrentUserIndex].sheduledMeetings)
                 {
-                    checkedListSheduledM.Items.Add(item.title + " - at: " + item.slots[0] + " - in: " + item.location);
+                    checkedListSheduledM.Items.Add(item.title + "- at: " + item.slots[0] + " - in: " + item.location);
                 }
 
             }
@@ -71,7 +71,8 @@ namespace Meeting_Scheduler
         {
             foreach (string item in checkedListProposedM.CheckedItems)
             {
-                ObjectManipulation.UserCollection.listOfUsers[ObjectManipulation.CurrentUserIndex].acceptSheduledMeeting(item);
+                string[] splitter = item.Split('-');
+                ObjectManipulation.UserCollection.listOfUsers[ObjectManipulation.CurrentUserIndex].acceptSheduledMeeting(splitter[0]);
                 ObjectManipulation.JSON_Serialized(ObjectManipulation.UserCollection);
                 
             }
